@@ -57,14 +57,14 @@ const fetchApi = async () => {
 }
 fetchApi();
 const id = 1;
-const deleteApi = async (id) => {
+const deleteApi = async () => {
     const response = await fetch(`https://fakestoreapi.com/products/${id}`, {
         method: 'DELETE'
       })
         const data = await response.json();
         console.log(data);
     }
-    deleteApi(id);
+    deleteApi();
 const products = {
     "id": 0,
     "title": "string",
@@ -85,7 +85,7 @@ const createApi = async (products) => {
     console.log(data);
 }
 createApi(products);
-const updateApi = async (id, products) => {
+const updateApi = async (products) => {
     const response = await fetch(`https://fakestoreapi.com/products/${id}`, {
         method: 'PUT',
         headers: {
@@ -96,4 +96,38 @@ const updateApi = async (id, products) => {
     const data = await response.json();
     console.log(data);
 }
-updateApi(id, products);
+updateApi(products);
+// scope 
+var tun;
+function test() {
+    var tun = 10;
+}
+console.log(tun); // undefined
+
+// closure 
+function createCounter() {
+    let count = 0;
+    return function() {
+        count++;
+        return count;
+    }
+}
+const counter = createCounter();
+console.log(counter()); // 1
+// Hoisting
+// tung()
+// const tung = () => {
+//     console.log("Tùng");
+// }
+// Uncaught ReferenceError: Cannot access 'tung' before initialization
+
+//eventloop
+
+console.log("Start");
+setTimeout(() => {
+    console.log("Timeout 1");
+}, 0);
+setTimeout(() => {
+    console.log("Timeout 2");
+}, 0);
+console.log("End");
