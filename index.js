@@ -1,7 +1,9 @@
 var a = 10;
 console.log(a);
+const mang = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let tong = 0;
 var b = 20;
+// dieukien
 if(a == b) {
     console.log("Bằng nhau");
 }
@@ -9,41 +11,49 @@ else {
     console.log("Khác nhau");
 }
 a == b ? console.log("Bằng nhau") : console.log("Khác nhau");
-
+//ham
 for(let i = 0; i < 10; i++) {
     tong = tong + i;
 }
 console.log(tong);
+const object = {name : "Tùng", age: 20, address: "Hà Nội"};
+for(const key in object) {
+    console.log(key + " : " + object[key]);
+}
+for(const value of mang) {
+    console.log(value);
+}
 const tinhtong = (a, b) => {
     return a + b;
 }
-
 console.log(tinhtong(10, 20));
 
+// callback
 function tinhHieu(a,b,ham) {
     ham(a,b);
 }
-
 function hieu(a,b) {
     const c = a - b;
     console.log(c);
 }
 tinhHieu(10, 20, hieu);
 
-
-// const mang = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// mang.forEach((item, index) => {
-//     console.log(item);
-// });
-// const tung = mang.map((item, index) => {
-//     return (item * 2);
-// });
-// console.log(tung);
-
+mang.forEach((item, index) => {
+    console.log(item);
+});
+const tung = mang.map((item, index) => {
+    return (item * 2);
+});
+console.log(tung);
+const le = mang.filter((item, index) => {
+    return item % 2 == 1;
+});
+console.log(le);
+const mang1 = le.slice(0, 3);
+console.log(mang1);
 const promise = new Promise((resolve, reject) => {
     resolve("Success!");
   });
-  
 promise.then(result => console.log(result));
   
 const fetchApi = async () => {
@@ -103,7 +113,6 @@ function test() {
     var tun = 10;
 }
 console.log(tun); // undefined
-
 // closure 
 function createCounter() {
     let count = 0;
@@ -122,7 +131,6 @@ console.log(counter()); // 1
 // Uncaught ReferenceError: Cannot access 'tung' before initialization
 
 //eventloop
-
 console.log("Start");
 setTimeout(() => {
     console.log("Timeout 1");
