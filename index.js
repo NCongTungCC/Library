@@ -48,7 +48,7 @@ promise.then(result => console.log(result));
   
 const fetchApi = async () => {
     try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+        const response = await fetch('https://fakestoreapi.com/products');
         const data = await response.json();
         console.log(data);
     } catch (error) {
@@ -56,3 +56,44 @@ const fetchApi = async () => {
     }
 }
 fetchApi();
+const id = 1;
+const deleteApi = async (id) => {
+    const response = await fetch(`https://fakestoreapi.com/products/${id}`, {
+        method: 'DELETE'
+      })
+        const data = await response.json();
+        console.log(data);
+    }
+    deleteApi(id);
+const products = {
+    "id": 0,
+    "title": "string",
+    "price": 0.1,
+    "description": "string",
+    "category": "string",
+    "image": "http://example.com"
+  }
+const createApi = async (products) => {
+    const response = await fetch(`https://fakestoreapi.com/products`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(products)
+    })
+    const data = await response.json();
+    console.log(data);
+}
+createApi(products);
+const updateApi = async (id, products) => {
+    const response = await fetch(`https://fakestoreapi.com/products/${id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(products)
+    })
+    const data = await response.json();
+    console.log(data);
+}
+updateApi(id, products);
