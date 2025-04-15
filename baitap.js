@@ -17,8 +17,8 @@ const bai3 = [12, 46, 32, 64];
 const mean = bai3.reduce((mean, item) => mean + item, 0) / bai3.length;
 console.log("Mean:", mean);
 const bai3_1 = bai3.sort((a, b) => a - b);
-const sophantu = Math.floor(bai3_1.length / 2);
-const median = bai3_1.length % 2 !== 0 ? bai3_1[sophantu] : (bai3_1[sophantu - 1] + bai3_1[sophantu]) / 2;
+const phantugiua = Math.floor(bai3_1.length / 2);
+const median = bai3_1.length % 2 !== 0 ? bai3_1[phantugiua] : (bai3_1[phantugiua - 1] + bai3_1[phantugiua]) / 2;
 console.log("Median:", median);
 //bai4
 const bai4 = "George Raymond Richard Martin";
