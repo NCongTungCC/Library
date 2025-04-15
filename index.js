@@ -41,6 +41,8 @@ tinhHieu(10, 20, hieu);
 mang.forEach((item, index) => {
     console.log(item);
 });
+mang.shift();
+console.log(mang);
 const tung = mang.map((item, index) => {
     return (item * 2);
 });
