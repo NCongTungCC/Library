@@ -15,11 +15,10 @@ console.log(sum);
 const bai3 = [12, 46, 32, 64];
 
 const mean = bai3.reduce((mean, item) => mean + item, 0) / bai3.length;
-console.log("Mean:", mean);
 const bai3_1 = bai3.sort((a, b) => a - b);
-const sophantu = Math.floor(bai3_1.length / 2);
-const median = bai3_1.length % 2 !== 0 ? bai3_1[sophantu] : (bai3_1[sophantu - 1] + bai3_1[sophantu]) / 2;
-console.log("Median:", median);
+const vitrigiua = Math.floor(bai3_1.length / 2);
+const median = bai3_1.length % 2 !== 0 ? bai3_1[vitrigiua] : (bai3_1[vitrigiua - 1] + bai3_1[vitrigiua]) / 2;
+console.log({ "Mean:" : mean, "Median:" : median});
 //bai4
 const bai4 = "George Raymond Richard Martin";
 const bai4_1 = bai4.split(" "); //hàm split tách chuỗi thành mảng
