@@ -56,7 +56,7 @@ const tuoi = bai5.map((item) => {
 const max = Math.max(...tuoi); 
 const min = Math.min(...tuoi);
 const chenhlech = max - min;
-console.log([max , min, chenhlech]);
+console.log([min , max, chenhlech]);
 //bai6
 const bai6 = "Every developer likes to mix kubernetes and javascript";
 const bai6_1 = bai6.split(" ");
@@ -81,6 +81,7 @@ console.log(bai6_2.join(" "));
 // }
 // console.log(gt);
 // console.log(`Giai thừa của ${n} là: ${giaithua(n)}`);
+
 //bai8
 const bai8 = [
     ["a", "b", "c"],
