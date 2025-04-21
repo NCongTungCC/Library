@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "http": "^0.0.1-security"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
