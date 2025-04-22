@@ -1,5 +1,7 @@
 const port = 3000;
 const http = require('http');
+const fs = require('fs');
+const url = require('url');
 const app = http.createServer((req, res) => {
     const { method, url } = req;
     if(method === 'GET' && url === '/') {
@@ -43,6 +45,26 @@ const app = http.createServer((req, res) => {
         return;
     }
 });
+const a = () => {
+    console.log("A");
+}
+setTimeout(() => {
+    console.log("Timeout 1s");
+}, 0);
+console.log(3);
+fs.readFile('index.html', (err, data) => {
+    if(err) {
+       throw err;}
+    console.log(data.toString());
+});
+const promise = new Promise((resolve, reject) => {
+    resolve("Success!");
+  });
+promise.then(result => console.log(result));
+a();
+/* Khi chương trình chạy, nó sẽ thực hiện các tác vụ đồng bộ trước
+còn các tác vụ bất đồng bộ sẽ được đưa vào hàng đợi và được thực hiện sau khi hoàn thành 
+các tác vụ đồng bộ */
 
 app.listen(port, () => {
     console.log(`Server đang khởi chạy tại port ${port}`);
