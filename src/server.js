@@ -48,10 +48,16 @@ const app = http.createServer((req, res) => {
 const a = () => {
     console.log("A");
 }
+process.nextTick(() => {
+    console.log("Next Tick 1s");
+});
 setTimeout(() => {
     console.log("Timeout 1s");
 }, 0);
 console.log(3);
+setImmediate(() => {
+    console.log("Immediate 1s");
+});
 fs.readFile('index.html', (err, data) => {
     if(err) {
        throw err;}
