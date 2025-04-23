@@ -58,10 +58,27 @@ const updateBook = async (req, res) => {
         message : 'Cập nhật thành công',
     })
 }
+const searchBook = async (req, res) => {
+    const {query} = req.params;
+
+    const book = await Book.find({tensach : { $regex: query , $options: 'i' }})
+    if(!book) {
+        return res.status(404).json({
+            code : 404,
+            message : 'Không tìm thấy sách',
+        })
+    }
+    return res.status(200).json({
+        code : 200, 
+        message : "Tìm kiếm thành công",
+        data : book,
+    })
+}
 const BookController = {
     createBook,
     deleteBook,
     updateBook,
     getBook,
+    searchBook,
 }
 module.exports = BookController;

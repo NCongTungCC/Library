@@ -17,23 +17,35 @@ Gồm 3 bảng
 Bảng books để lưu trữ dữ liệu sách
 
 id           ObjectId
+
 tensach      String
+
 tacgia       String 
+
 namxuatban   Int
+
 mota         String
+
 poster       String
+
 soluong      Int
 
 Bảng users để lưu trữ tài khoản
 
 id           ObjectId
+
 username     String
+
 password     String
 
 Bảng borrowings để lưu trữ dữ liệu mượn trả sách
 
 id           ObjectId
+
 userId       ObjectId
+
 bookId       ObjectId
+
 brrowDate    Date
+
 returnDate   Date   

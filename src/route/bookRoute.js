@@ -11,4 +11,6 @@ router.put("/books/:id", authenToken, BookController.updateBook);
 
 router.get("/books", authenToken, BookController.getBook);
 
+router.get("/books/:query",  authenToken, BookController.searchBook);
+
 module.exports = router;
