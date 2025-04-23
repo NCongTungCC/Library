@@ -13,12 +13,12 @@ const createBook = async (req, res) => {
     const {tensach, tacgia, namxuatban, poster, mota, soluong} = req.body;
 
     const newBook = new Book({
-        tensach : tensach,
-        tacgia : tacgia,
-        namxuatban : namxuatban,
-        poster : poster,
-        mota : mota,
-        soluong : soluong,
+        tensach,
+        tacgia,
+        namxuatban,
+        poster,
+        mota,
+        soluong,
     })
 
     await newBook.save();

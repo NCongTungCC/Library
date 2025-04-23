@@ -1,9 +1,23 @@
 const mongoose = require('mongoose');
 
-const BrrowingSchema = new mongoose.Schema({
+const BorrowingSchema = new mongoose.Schema({
     userId : {
         type : mongoose.Types.ObjectId,
         required : true,
-        ref : users,
+        ref : 'UserModel',
+    },
+    bookId : {
+        type : mongoose.Types.ObjectId,
+        required : true,
+        ref : 'BookModel',
+    },
+    brrowDate : {
+        type : Date,
+        required : true,
+    },
+    returnDate : {
+        type : Date,
     }
 })
+
+module.exports = mongoose.model("BrrowModel", BorrowingSchema, "borrowings");
