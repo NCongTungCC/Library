@@ -14,13 +14,13 @@ Phân tích cơ sở dữ liệu
 
 Gồm 3 bảng
 
-Bảng books để lưu trữ dữ liệu sách
+Bảng books để lưu trữ dữ liệu sách         Bảng users để lưu trữ tài khoản                         
 
-id           ObjectId
+id           ObjectId                       id           ObjectId
 
-tensach      String
+tensach      String                         username     String
 
-tacgia       String 
+tacgia       String                         password     String
 
 namxuatban   Int
 
@@ -30,22 +30,15 @@ poster       String
 
 soluong      Int
 
-Bảng users để lưu trữ tài khoản
-
-id           ObjectId
-
-username     String
-
-password     String
-
 Bảng borrowings để lưu trữ dữ liệu mượn trả sách
 
-id           ObjectId
+id ObjectId
 
-userId       ObjectId
+userId ObjectId
 
-bookId       ObjectId
+bookId ObjectId
 
-brrowDate    Date
+brrowDate Date
 
-returnDate   Date   
+returnDate Date
+
