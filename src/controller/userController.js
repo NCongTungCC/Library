@@ -45,15 +45,13 @@ const changePass = async (req, res) => {
     const {password, newPassword} = req.body;
     
     const user = await User.findOne({ _id : id});
-
-    await User.updateOne(
-        { _id: id },
-        { $set: { password: newPassword } }
-    );
+    if(user.password === password) {
+    await user.updateOne({ password: newPassword });
     return res.status(200).json({
         code:200,
         message: 'Cập nhật thông tin thành công',
     })
+}
 }
 const UserController = {
     login,
