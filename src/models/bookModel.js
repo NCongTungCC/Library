@@ -24,6 +24,10 @@ const BookSchema = new mongoose.Schema({
     soluong : {
         type : Number,
         required : true,
+    },
+    theloai : {
+        type : String,
+        required : true,
     }
 });
 

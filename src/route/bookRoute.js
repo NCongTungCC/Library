@@ -13,4 +13,6 @@ router.get("/books", authenToken, BookController.getBook);
 
 router.get("/books/:query",  authenToken, BookController.searchBook);
 
+router.get("/books/genere/:genere",  authenToken, BookController.getBookByGenere);
+
 module.exports = router;
