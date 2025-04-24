@@ -10,8 +10,8 @@ const getBook = async (req, res) => {
 }
 
 const createBook = async (req, res) => {
-    const {tensach, tacgia, namxuatban, poster, mota, soluong, theloai} = req.body;
-
+    const {tensach, tacgia, namxuatban, mota, soluong, theloai} = req.body;
+    const poster = req.file ? req.file.path : '';
     const newBook = new Book({
         tensach,
         tacgia,
@@ -45,7 +45,8 @@ const deleteBook = async (req, res) => {
 }
 const updateBook = async (req, res) => {
     const {id} = req.params;
-    const {tensach, tacgia, namxuatban, poster, mota, soluong, theloai} = req.body;
+    const {tensach, tacgia, namxuatban, mota, soluong, theloai} = req.body;
+    const poster = req.file ? req.file.path : '';
     const book = Book.findOne({ _id : id });
     if(!book) {
         return res.status(404).json({

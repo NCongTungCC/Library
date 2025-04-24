@@ -1,18 +1,29 @@
-Phân tích chức năng hệ thống 
+PHÂN TÍCH CHỨC NĂNG HỆ THỐNG
 
-Chức năng người dùng
-Đăng ký, đăng nhập, đổi mật khẩu
-Xác thực người dùng bằng JWT
+1. Chức năng người dùng
+Đăng ký: Cho phép người dùng tạo tài khoản mới với username, password.
 
-Quản lý sách
-Thêm sách mới, Xóa sách, Chỉnh sửa thông tin sách
+Đăng nhập: Người dùng cung cấp username và password để xác thực và nhận về JWT Token.
 
-Mượn trả sách
+Xác thực bằng JWT: Hệ thống sử dụng token để xác minh người dùng hợp lệ khi gọi các API có yêu cầu đăng nhập (middleware authenticateToken).
 
+Đổi mật khẩu: Người dùng cung cấp mật khẩu cũ, mật khẩu mới để đổi mật khẩu. Hệ thống kiểm tra xác thực trước khi cho phép đổi.
 
-Phân tích cơ sở dữ liệu
+2. Quản lý sách
+Thêm sách mới: Admin có thể thêm sách vào thư viện (bao gồm các trường: tên sách, tác giả, mô tả, số lượng, poster, thể loại,...).
 
-Gồm 3 bảng
+Chỉnh sửa thông tin sách: Cho phép cập nhật nội dung như tên sách, mô tả, ảnh bìa, số lượng còn lại.
+
+Xóa sách: Xóa sách khỏi thư viện.
+
+3. Chức năng mượn - trả sách
+Người dùng chọn sách để mượn, hệ thống: Tạo bản ghi mượn với thời gian borrowDate. Giảm số lượng sách còn lại.
+
+Khi trả sách: Cập nhật returnDate trong bảng borrowings. Tăng số lượng sách trong thư viện.
+
+PHÂN TÍCH CƠ SỞ DỮ LIỆU
+
+Gồm 3 bảng (collection): books, users, borrowings.
 
 Bảng books để lưu trữ dữ liệu sách
 

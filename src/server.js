@@ -1,15 +1,29 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 const app = express();
+const cors = require('cors');
 require('dotenv').config();
+const { UserRouter, BookRouter, BorrowRouter } = require('./route/index.js');
+
+
 const apiRoute = "/libary";
 const port = 3000;
 const connection = require('./config/db.js');
-const { UserRouter, BookRouter, BorrowRouter } = require('./route/index.js');
+
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+app.get("/", (req, res) => {
+    res.render('upload.ejs');
+})
+
 
 app.use(bodyParser.json({ extend : true }));
 app.use(bodyParser.urlencoded({ extended: true, limit : "50mb" }));
 
+
+app.use(cors());
 app.use(apiRoute, UserRouter);
 app.use(apiRoute, BookRouter);
 app.use(apiRoute, BorrowRouter);

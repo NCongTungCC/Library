@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; width:30%;">
+        <label>Tên sách : </label><input class="tensach" type="text">
+        <label>Tác giả : </label><input class="tacgia" type="text">
+        <label>Năm xuất bản : </label><input class="namxuatban" type="text">
+        <label>Mô tả : </label><input class="mota" type="text">
+        <label>Poster : </label><input class="poster" type="file">
+        <label>Thể loại : </label><input class="theloai" type="text">
+        <label>Số lượng : </label><input class="soluong" type="text">
+        <button>Tạo</button>
+    </div>
+
+    <script>
+        const add = document.querySelector("button");
+
+        add.addEventListener('click', () => {
+            const formData = new FormData();
+            formData.append("tensach", document.querySelector(".tensach").value);
+            formData.append("tacgia", document.querySelector(".tacgia").value);
+            formData.append("namxuatban", document.querySelector(".namxuatban").value); 
+            formData.append("mota", document.querySelector(".mota").value);
+            formData.append("poster", document.querySelector(".poster").files[0]); 
+            formData.append("theloai", document.querySelector(".theloai").value);
+            formData.append("soluong", document.querySelector(".soluong").value);
+
+            const fetchApi = async () => {
+                const response = await fetch('http://localhost:3000/libary/books', {
+                    method : "POST",
+                    body: formData 
+                });
+                if(response.ok){
+                    console.log('Tạo sách thành công');
+                } else {
+                    const err = await response.json();
+                    console.error("Lỗi:", err);
+                }
+            }
+
+    fetchApi();
+});
+       
+    </script>
+</body>
+</html>
