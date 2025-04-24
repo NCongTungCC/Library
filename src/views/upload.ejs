@@ -19,7 +19,6 @@
 
     <script>
         const add = document.querySelector("button");
-
         add.addEventListener('click', () => {
             const formData = new FormData();
             formData.append("tensach", document.querySelector(".tensach").value);
@@ -42,7 +41,7 @@
                 }
             }
 
-    fetchApi();
+        fetchApi();
 });
        
     </script>

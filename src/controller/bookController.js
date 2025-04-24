@@ -1,103 +1,84 @@
-const Book = require('../models/bookModel');
-
-const getBook = async (req, res) => {
-
-    const books = await Book.find();
-    return res.status(200).json({
-        code : 200,
-        data : books,
-    })
-}
-
-const createBook = async (req, res) => {
-    const {tensach, tacgia, namxuatban, mota, soluong, theloai} = req.body;
-    const poster = req.file ? req.file.path : '';
-    const newBook = new Book({
-        tensach,
-        tacgia,
-        namxuatban,
-        poster,
-        mota,
-        soluong,
-        theloai
-    })
-
-    await newBook.save();
-    return res.status(200).json({
-        code : 200,
-        message : 'Thêm sách thành công',
-    })
-}
-const deleteBook = async (req, res) => {
-    const { id } = req.params;
-    const book = Book.findOne({ _id : id });
-    if(!book) {
-        return res.status(404).json({
-            code : 404,
-            message : 'Không tìm thấy sách',
+class BookController {
+    constructor(BookService) {
+        this.BookService = BookService;
+    }
+    getBook = async (req, res) => {
+       const result = await this.BookService.getBookService();
+       if(result.code !== 200) {
+        return res.status(result.code).json({
+            code : result.code,
+            message : result.message,
+            data : result.data,
+        })
+       } else
+        return res.status(200).json({
+            code : 200,
+            message : result.message,
+            data : result.data,
         })
     }
-    await book.deleteOne();
-    return res.status(200).json({
-        code : 200,
-        message : 'Xóa thành công',
-    })
-}
-const updateBook = async (req, res) => {
-    const {id} = req.params;
-    const {tensach, tacgia, namxuatban, mota, soluong, theloai} = req.body;
-    const poster = req.file ? req.file.path : '';
-    const book = Book.findOne({ _id : id });
-    if(!book) {
-        return res.status(404).json({
-            code : 404,
-            message : 'Không tìm thấy sách',
-        })
-    }
-    await book.updateOne({tensach, tacgia, namxuatban, poster, mota, soluong, theloai});
-    return res.status(200).json({
-        code : 200,
-        message : 'Cập nhật thành công',
-    })
-}
-const searchBook = async (req, res) => {
-    const {query} = req.params;
 
-    const book = await Book.find({tensach : { $regex: query , $options: 'i' }})
-    if(!book) {
-        return res.status(404).json({
-            code : 404,
-            message : 'Không tìm thấy sách',
-        })
+    createBook = async (req, res) => {
+        const {tensach, tacgia, namxuatban, mota, soluong, theloai} = req.body;
+        const poster = req.file ? req.file.path : '';
+        const result = await this.BookService.createBookService({tensach, tacgia, namxuatban, mota, poster, soluong, theloai});
+        if(result.code !== 200) {
+            return res.status(result.code).json({
+                code : result.code,
+                message : result.message,
+            })
+           } else
+            return res.status(200).json({
+                code : 200,
+                message : result.message,
+            })
     }
-    return res.status(200).json({
-        code : 200, 
-        message : "Tìm kiếm thành công",
-        data : book,
-    })
-}
-const getBookByGenere = async (req, res) => {
-    const {genere} = req.params;
-    
-    const book = await Book.find({theloai : { $regex: genere , $options: 'i' }})
-    if(!book) {
-        return res.status(404).json({
-            code : 404,
-            message : 'Không tìm thấy sách',
-        })
+    deleteBook = async (req, res) => {
+        const { id } = req.params;
+        const result = await this.BookService.deleteBookService({id});
+        if(result.code !== 200) {
+         return res.status(result.code).json({
+             code : result.code,
+             message : result.message,
+         })
+        } else
+         return res.status(200).json({
+             code : 200,
+             message : result.message,
+         })
     }
-    return res.status(200).json({
-        code : 200, 
-        message : "Tìm kiếm thành công",
-        data : book,
-    })
+    updateBook = async (req, res) => {
+        const {id} = req.params;
+        const {tensach, tacgia, namxuatban, mota, soluong, theloai} = req.body;
+        const poster = req.file ? req.file.path : '';
+        const result = await this.BookService.updateBookService({id, tensach, tacgia, namxuatban, mota, poster, soluong, theloai});
+        if(result.code !== 200) {
+            return res.status(result.code).json({
+                code : result.code,
+                message : result.message,
+            })
+           } else
+            return res.status(200).json({
+                code : 200,
+                message : result.message,
+                data : result.data,
+            })
+    }
+    searchBook = async (req, res) => {
+        const {query} = req.params;
+
+        const result = await this.BookService.updateBookService({ query });
+        if(result.code !== 200) {
+            return res.status(result.code).json({
+                code : result.code,
+                message : result.message,
+            })
+           } else
+            return res.status(200).json({
+                code : 200,
+                message : result.message,
+            })
+    }
 }
-const BookController = {
-    createBook,
-    deleteBook,
-    updateBook,
-    getBook,
-    searchBook,
-    getBookByGenere
-}
+
 module.exports = BookController;

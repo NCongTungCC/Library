@@ -27,6 +27,7 @@ app.use(cors());
 app.use(apiRoute, UserRouter);
 app.use(apiRoute, BookRouter);
 app.use(apiRoute, BorrowRouter);
+
 app.listen(port, () => {
     console.log(`Server đang khởi chạy tại port ${port}`);
 });
