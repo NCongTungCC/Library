@@ -49,8 +49,7 @@ class BookController {
     }
     updateBook = async (req, res) => {
         const {id} = req.params;
-        const {tensach, tacgia, namxuatban, mota, soluong, theloai} = req.body;
-        const poster = req.file ? req.file.path : '';
+        const {tensach, tacgia, namxuatban, mota, soluong, poster, theloai} = req.body;
         const result = await this.BookService.updateBookService({id, tensach, tacgia, namxuatban, mota, poster, soluong, theloai});
         if(result.code !== 200) {
             return res.status(result.code).json({

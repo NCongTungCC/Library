@@ -49,7 +49,7 @@ class BookService {
         }
     }
     async updateBookService({id, tensach, tacgia, namxuatban, mota, poster, soluong, theloai}) {
-        const book = Book.findOne({ _id : id });
+        const book = this.Book.findOne({ _id : id });
             if(!book) {
                 return {
                     code : 404,
