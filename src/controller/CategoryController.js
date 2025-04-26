@@ -1,11 +1,7 @@
 const Category = require('../models/categoryModel');
 const Log = require('../models/logModel');
-
 const CategoryService = require('../service/categoryService');
-const CategoryServiceInstance = new CategoryService(Category);
-
 const LogService = require('../service/logService');
-const logServiceInstance = new LogService(Log);
 
 class CategoryController {
     constructor(CategoryServiceInstance, logServiceInstance) {
@@ -74,4 +70,7 @@ class CategoryController {
             })
 }
 }
+
+const logServiceInstance = new LogService(Log);
+const CategoryServiceInstance = new CategoryService(Category);
 module.exports = new CategoryController(CategoryServiceInstance, logServiceInstance);
