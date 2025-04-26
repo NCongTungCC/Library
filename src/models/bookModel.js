@@ -28,7 +28,17 @@ const BookSchema = new mongoose.Schema({
     theloai : {
         type : String,
         required : true,
+    }, 
+    nguoitao : {
+        type : String,
+        required : true,
+    },
+    nguoicapnhat : {
+        type : String,
+        default : null,
     }
+}, {
+    timestamps: true,
 });
 
 module.exports = mongoose.model("BookModel", BookSchema, "books");

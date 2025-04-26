@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 const cors = require('cors');
 require('dotenv').config();
-const { UserRouter, BookRouter, BorrowRouter } = require('./route/index.js');
+const { UserRouter, BookRouter, BorrowRouter, StatisticRouter, CategoryRouter } = require('./route/index.js');
 
 
 const apiRoute = "/libary";
@@ -27,7 +27,8 @@ app.use(cors());
 app.use(apiRoute, UserRouter);
 app.use(apiRoute, BookRouter);
 app.use(apiRoute, BorrowRouter);
-
+app.use(apiRoute, StatisticRouter);
+app.use(apiRoute, CategoryRouter);
 app.listen(port, () => {
     console.log(`Server đang khởi chạy tại port ${port}`);
 });

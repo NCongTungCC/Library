@@ -10,10 +10,20 @@ const UserSchema = new mongoose.Schema(
             type : String,
             required : true,
         },
+        birthday : {
+            type : Date,
+            required : true,
+        },
+        gender : {
+            type : String,
+            required : true,
+        },
         isAdmin : {
             type : Boolean,
             required : true,
         }
+    }, {
+        timestamps: true,
     });
 
 module.exports = mongoose.model("UserModel", UserSchema, "users");

@@ -3,22 +3,18 @@ const authenToken = require('../middleware/authenticateToken');
 const router = express.Router();
 const upload = require('../middleware/multer');
 const multer = require('multer');
+// upload.single('poster')
 
-const BookService = require('../service/bookService');
-const Book = require('../models/bookModel');
 const BookController = require('../controller/bookController');
 
-const BookServiceInstance = new BookService(Book);
-const BookControllerInstance = new BookController(BookServiceInstance);
+router.post("/books", authenToken, BookController.createBook);
 
-router.post("/books", upload.single('poster'), BookControllerInstance.createBook);
+router.delete("/books/:id", authenToken, BookController.deleteBook);
 
-router.delete("/books/:id", authenToken, BookControllerInstance.deleteBook);
+router.put("/books/:id", authenToken, BookController.updateBook);
 
-router.put("/books/:id", upload.single('poster'), authenToken, BookControllerInstance.updateBook);
+router.get("/books", authenToken, BookController.getBook);
 
-router.get("/books", authenToken, BookControllerInstance.getBook);
-
-router.get("/books/:query",  authenToken, BookControllerInstance.searchBook);
+router.get("/books/:query",  authenToken, BookController.searchBook);
 
 module.exports = router;

@@ -1,6 +1,9 @@
+const Book = require('../models/bookModel');
+const User = require('../models/userModel');
 class BookService {
-    constructor(Book) {
+    constructor(Book, User) {
         this.Book = Book;
+        this.User = User;
     }
 
     async getBookService() {
@@ -17,7 +20,9 @@ class BookService {
             data : book,
         }
     }
-    async createBookService({tensach, tacgia, namxuatban, mota, poster, soluong, theloai}) {
+    async createBookService({id, tensach, tacgia, namxuatban, mota, poster, soluong, theloai}) {
+        const user = await this.User.findOne({_id : id});
+        const nameUser = user.username;
         const newBook = new this.Book({
             tensach,
             tacgia,
@@ -25,7 +30,8 @@ class BookService {
             poster,
             mota,
             soluong,
-            theloai
+            theloai,
+            nguoitao : nameUser,
         })
         await newBook.save();
         return {
@@ -48,22 +54,24 @@ class BookService {
             message : 'Xóa thành công',
         }
     }
-    async updateBookService({id, tensach, tacgia, namxuatban, mota, poster, soluong, theloai}) {
-        const book = this.Book.findOne({ _id : id });
+    async updateBookService({id, userId, tensach, tacgia, namxuatban, mota, poster, soluong, theloai}) {
+        const book = await this.Book.findOne({ _id : id });
             if(!book) {
                 return {
                     code : 404,
                     message : 'Không tìm thấy sách',
                 }
             }
-            await book.updateOne({tensach, tacgia, namxuatban, poster, mota, soluong, theloai});
+        const user = await this.User.findOne({_id : userId});
+        const username = user.username;
+            await book.updateOne({tensach, tacgia, namxuatban, poster, mota, soluong, theloai, nguoicapnhat : username});
             return{
                 code : 200,
                 message : 'Cập nhật thành công',
             }
     }
     async searchBookService({query}) {
-         const book = await Book.find({tensach : { $regex: query , $options: 'i' }})
+         const book = await this.Book.find({tensach : { $regex: query , $options: 'i' }})
             if(!book) {
                 return {
                     code : 404,
@@ -77,4 +85,5 @@ class BookService {
             }
     }
 }
+
 module.exports = BookService;

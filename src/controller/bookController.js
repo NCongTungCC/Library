@@ -1,14 +1,19 @@
+const BookService = require('../service/bookService');
+const Book = require('../models/bookModel');
+const User = require('../models/userModel');
+const bookServiceInstance = new BookService(Book, User);
+
+
 class BookController {
-    constructor(BookService) {
-        this.BookService = BookService;
+    constructor(bookServiceInstance) {
+        this.bookServiceInstance = bookServiceInstance;
     }
     getBook = async (req, res) => {
-       const result = await this.BookService.getBookService();
+       const result = await bookServiceInstance.getBookService();
        if(result.code !== 200) {
         return res.status(result.code).json({
             code : result.code,
             message : result.message,
-            data : result.data,
         })
        } else
         return res.status(200).json({
@@ -17,11 +22,11 @@ class BookController {
             data : result.data,
         })
     }
-
     createBook = async (req, res) => {
-        const {tensach, tacgia, namxuatban, mota, soluong, theloai} = req.body;
-        const poster = req.file ? req.file.path : '';
-        const result = await this.BookService.createBookService({tensach, tacgia, namxuatban, mota, poster, soluong, theloai});
+        const {tensach, tacgia, namxuatban, poster, mota, soluong, theloai} = req.body;
+        // const poster = req.file ? req.file.path : '';
+        const id = req.user?.id;
+        const result = await bookServiceInstance.createBookService({id, tensach, tacgia, namxuatban, mota, poster, soluong, theloai});
         if(result.code !== 200) {
             return res.status(result.code).json({
                 code : result.code,
@@ -35,7 +40,7 @@ class BookController {
     }
     deleteBook = async (req, res) => {
         const { id } = req.params;
-        const result = await this.BookService.deleteBookService({id});
+        const result = await bookServiceInstance.deleteBookService({id});
         if(result.code !== 200) {
          return res.status(result.code).json({
              code : result.code,
@@ -49,8 +54,9 @@ class BookController {
     }
     updateBook = async (req, res) => {
         const {id} = req.params;
+        const userId = req.user?.id;
         const {tensach, tacgia, namxuatban, mota, soluong, poster, theloai} = req.body;
-        const result = await this.BookService.updateBookService({id, tensach, tacgia, namxuatban, mota, poster, soluong, theloai});
+        const result = await bookServiceInstance.updateBookService({id, userId, tensach, tacgia, namxuatban, mota, poster, soluong, theloai});
         if(result.code !== 200) {
             return res.status(result.code).json({
                 code : result.code,
@@ -66,7 +72,7 @@ class BookController {
     searchBook = async (req, res) => {
         const {query} = req.params;
 
-        const result = await this.BookService.updateBookService({ query });
+        const result = await bookServiceInstance.updateBookService({ query });
         if(result.code !== 200) {
             return res.status(result.code).json({
                 code : result.code,
@@ -80,4 +86,4 @@ class BookController {
     }
 }
 
-module.exports = BookController;
+module.exports = new BookController(bookServiceInstance);;

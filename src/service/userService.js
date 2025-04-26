@@ -1,8 +1,11 @@
+const User = require('../models/userModel');
+const generateToken = require('../middleware/generateToken');
+
 class UserService {
-    constructor(User, generateToken) {
+    constructor(User, generateToken) { 
         this.User = User;
         this.generateToken = generateToken;
-    } 
+     } 
 
     async loginService( { username, password } ) {
         const user = await this.User.findOne({ username });
@@ -21,7 +24,7 @@ class UserService {
             code : 200,
             token : token,
         }}
-    async signupService( { username, password } ) {
+    async signupService( { username, password, birthday, gender } ) {
         const user = await this.User.findOne({ username });
         if(user) {
             return {
@@ -32,6 +35,8 @@ class UserService {
         const newUser = new this.User({
             username : username,
             password : password,
+            birthday : birthday,
+            gender : gender,
             isAdmin : false,
         })
         await newUser.save();

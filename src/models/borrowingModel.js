@@ -11,13 +11,20 @@ const BorrowingSchema = new mongoose.Schema({
         required : true,
         ref : 'BookModel',
     },
-    brrowDate : {
+    borrowDate : {
         type : Date,
         required : true,
     },
     returnDate : {
         type : Date,
+        default : null,
+    },
+    status : {
+        type : String,
+        default : 'Chưa trả',
     }
+}, {
+    timestamps: true,
 })
 
 module.exports = mongoose.model("BrrowModel", BorrowingSchema, "borrowings");

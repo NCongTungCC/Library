@@ -1,9 +1,12 @@
-class BorrowService {
-    constructor(Borrow, Book) {
-        this.Borrow = Borrow;
-        this.Book = Book;
-    }
+const Borrow = require('../models/borrowingModel');
+const Book = require('../models/bookModel')
 
+class BorrowService {
+    constructor(Borrow, Book) { 
+        this.Borrow = Borrow;
+        this.Book = Book
+     }
+    
     async BrrowbookService({ userId, bookId }) {
         const book = await this.Book.findOne({ _id: bookId });
         if (!book) {
@@ -38,8 +41,7 @@ class BorrowService {
         const newBorrowing = new this.Borrow({
             userId: userId,
             bookId: bookId,
-            brrowDate: new Date(),
-            returnDate: null,
+            borrowDate: new Date(),
         });
         await newBorrowing.save();
     
@@ -63,7 +65,7 @@ class BorrowService {
 
         book.soluong += 1;
         await book.save();
-        await borrow.updateOne({returnDate : new Date()});
+        await borrow.updateOne({returnDate : new Date(), status : 'Đã Trả'});
         return {
             code : 200,
             message : 'Trả sách thành công',
