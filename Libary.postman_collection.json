@@ -224,6 +224,64 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Statistic",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetCategory",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCategory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MGM0ZTA5OTM1OWY1NzljNmNlYmY4ZiIsImlhdCI6MTc0NTYzNzUxMSwiZXhwIjoxNzQ4MjI5NTExfQ.svVlsPtmMAXDP4OB3b4S7Z-zC4NIurAbdfTLMkJaSHw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tentheloai\" : \"Trinh thám\",\r\n    \"mota\" : \"Phá\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/libary/category",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"libary",
+						"category"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
