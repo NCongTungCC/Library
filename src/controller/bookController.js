@@ -1,12 +1,15 @@
 const BookService = require('../service/bookService');
+const LogService = require('../service/logService');
 const Book = require('../models/bookModel');
 const User = require('../models/userModel');
+const Log = require('../models/logModel');
 const bookServiceInstance = new BookService(Book, User);
-
+const logServiceInstance = new LogService(Log);
 
 class BookController {
-    constructor(bookServiceInstance) {
+    constructor(bookServiceInstance, logServiceInstance) {
         this.bookServiceInstance = bookServiceInstance;
+        this.logServiceInstance = logServiceInstance;
     }
     getBook = async (req, res) => {
        const result = await bookServiceInstance.getBookService();
@@ -32,11 +35,13 @@ class BookController {
                 code : result.code,
                 message : result.message,
             })
-           } else
+           } else {
+            await logServiceInstance.CreateLog({userId : id, bookId : result.data._id, hanhdong : 'Tạo sách',});
             return res.status(200).json({
                 code : 200,
                 message : result.message,
             })
+        }
     }
     deleteBook = async (req, res) => {
         const { id } = req.params;
@@ -46,12 +51,14 @@ class BookController {
              code : result.code,
              message : result.message,
          })
-        } else
+        } else {
+         await logServiceInstance.CreateLog({userId : id, bookId : result.data._id, hanhdong : 'Xóa sách',});
          return res.status(200).json({
              code : 200,
              message : result.message,
          })
     }
+}
     updateBook = async (req, res) => {
         const {id} = req.params;
         const userId = req.user?.id;
@@ -62,12 +69,14 @@ class BookController {
                 code : result.code,
                 message : result.message,
             })
-           } else
+           } else { 
+            await logServiceInstance.CreateLog({userId : userId, bookId : id, hanhdong : 'Sửa sách',});
             return res.status(200).json({
                 code : 200,
                 message : result.message,
                 data : result.data,
             })
+    }
     }
     searchBook = async (req, res) => {
         const {query} = req.params;
@@ -86,4 +95,4 @@ class BookController {
     }
 }
 
-module.exports = new BookController(bookServiceInstance);;
+module.exports = new BookController(bookServiceInstance, logServiceInstance);;

@@ -1,7 +1,7 @@
 const express = require('express');
 const authenToken = require('../middleware/authenticateToken');
 
-const CategoryController = require('../controller/CategoryController');
+const CategoryController = require('../controller/categoryController');
 
 const router = express.Router();
 

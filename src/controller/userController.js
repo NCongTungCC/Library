@@ -1,5 +1,6 @@
 const User = require('../models/userModel');
 const generateToken = require('../middleware/generateToken');
+
 const UserService = require('../service/userService');
 const UserServiceInstance = new UserService(User, generateToken);
 

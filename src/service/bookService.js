@@ -52,6 +52,7 @@ class BookService {
         return {
             code : 200,
             message : 'Xóa thành công',
+            data : book,
         }
     }
     async updateBookService({id, userId, tensach, tacgia, namxuatban, mota, poster, soluong, theloai}) {
@@ -68,6 +69,7 @@ class BookService {
             return{
                 code : 200,
                 message : 'Cập nhật thành công',
+                data : book,
             }
     }
     async searchBookService({query}) {
