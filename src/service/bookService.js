@@ -20,7 +20,7 @@ class BookService {
             data : book,
         }
     }
-    async createBookService({id, tensach, tacgia, namxuatban, mota, poster, soluong, theloai}) {
+    async createBookService({id, tensach, tacgia, namxuatban, mota, poster, totalBook, theloai}) {
         const user = await this.User.findOne({_id : id});
         const nameUser = user.username;
         const newBook = new this.Book({
@@ -29,7 +29,8 @@ class BookService {
             namxuatban,
             poster,
             mota,
-            soluong,
+            totalBook,
+            availableBook : totalBook,
             theloai,
             nguoitao : nameUser,
         })

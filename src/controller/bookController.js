@@ -26,10 +26,10 @@ class BookController {
         })
     }
     createBook = async (req, res) => {
-        const {tensach, tacgia, namxuatban, poster, mota, soluong, theloai} = req.body;
+        const {tensach, tacgia, namxuatban, poster, mota, totalBook, theloai} = req.body;
         // const poster = req.file ? req.file.path : '';
         const id = req.user?.id;
-        const result = await bookServiceInstance.createBookService({id, tensach, tacgia, namxuatban, mota, poster, soluong, theloai});
+        const result = await bookServiceInstance.createBookService({id, tensach, tacgia, namxuatban, mota, poster, totalBook, theloai});
         if(result.code !== 200) {
             return res.status(result.code).json({
                 code : result.code,
@@ -40,6 +40,7 @@ class BookController {
             return res.status(200).json({
                 code : 200,
                 message : result.message,
+                data : result.data,
             })
         }
     }

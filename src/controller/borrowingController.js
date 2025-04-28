@@ -28,8 +28,8 @@ class BrrowController {
     return res.status(200).json({
         code : 200,
         message : result.message,
+        data: result.data
     })
-
 }
     returnBook = async (req, res) => {
     const id = req.user.id;
@@ -46,6 +46,7 @@ class BrrowController {
     return res.status(200).json({
         code : 200,
         message : result.message,
+        data: result.data
     })
 }
     confirmReturn = async (req, res) => {
@@ -59,9 +60,11 @@ class BrrowController {
                 message : result.message,
             })
         } else 
-            return res.status(200).json({
+        await this.logServiceInstance.CreateLog({userId, borrowId, hanhdong : 'Trả sách',});
+        return res.status(200).json({
             code : 200,
             message : result.message,
+            data : result.data,
         })
     }
 }

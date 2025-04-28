@@ -21,9 +21,17 @@ const BookSchema = new mongoose.Schema({
         type : String,
         required : true,
     },
-    soluong : {
+    totalBook : {
         type : Number,
         required : true,
+    },
+    availableBook : {
+        type : Number,
+        required : true,
+    },
+    borrowBook : {
+        type : Number,
+        default : 0,
     },
     theloai : {
         type : String,
