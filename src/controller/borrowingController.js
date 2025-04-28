@@ -1,9 +1,10 @@
 const Borrow = require('../models/borrowingModel');
 const Book = require('../models/bookModel')
 const Log = require('../models/logModel');
+const User = require('../models/userModel');
 
 const BorrowService = require('../service/borrowService');
-const BorrowServiceInstance = new BorrowService(Borrow, Book);
+const BorrowServiceInstance = new BorrowService(Borrow, Book, User);
 
 const LogService = require('../service/logService');
 const logServiceInstance = new LogService(Log);
@@ -46,8 +47,23 @@ class BrrowController {
         code : 200,
         message : result.message,
     })
-
 }
+    confirmReturn = async (req, res) => {
+        const userId = req.user?.id;
+        const { borrowId } = req.params;
+
+        const result = await this.BorrowServiceInstance.ConfirmReturn({userId, borrowId});
+        if(result.code !== 200) {
+            return res.status(result.code).json({
+                code : result.code,
+                message : result.message,
+            })
+        } else 
+            return res.status(200).json({
+            code : 200,
+            message : result.message,
+        })
+    }
 }
 
 module.exports = new BrrowController(BorrowServiceInstance, logServiceInstance);
