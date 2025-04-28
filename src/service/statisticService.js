@@ -20,7 +20,7 @@ class StatisticService {
                 countBook,
                 countUser,
                 booksBorrowed,
-            },
+            }
     }
 }
 }

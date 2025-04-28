@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "680c4cb7748b3fe4a4d456e2"
+  },
+  "username": "tung",
+  "password": "tung",
+  "birthday": {
+    "$date": "2002-03-05T17:00:00.000Z"
+  },
+  "gender": "Nam",
+  "isAdmin": true,
+  "createdAt": {
+    "$date": "2025-04-26T03:02:15.234Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T03:02:15.234Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c4e099359f579c6cebf8f"
+  },
+  "username": "tungtungtungsahur",
+  "password": "tung1",
+  "birthday": {
+    "$date": "2002-03-05T17:00:00.000Z"
+  },
+  "gender": "Nam",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2025-04-26T03:07:53.433Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T03:35:09.794Z"
+  },
+  "__v": 0
+}]

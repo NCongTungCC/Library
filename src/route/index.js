@@ -2,6 +2,6 @@ module.exports = {
     UserRouter : require('./userRoute'),
     BookRouter : require('./bookRoute'),
     BorrowRouter : require('./borrowingRoute'),
-    StatisticRouter : require('./StatisticRoute'),
+    StatisticRouter : require('./statisticRoute'),
     CategoryRouter : require('./categoryRoute'),
 }

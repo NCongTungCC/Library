@@ -1,0 +1,71 @@
+[{
+  "_id": {
+    "$oid": "680c63135791607ece2786db"
+  },
+  "userId": {
+    "$oid": "68085315bf0b854cf5c239cb"
+  },
+  "bookId": {
+    "$oid": "680c52a83a87318d6c05f4f3"
+  },
+  "borrowDate": {
+    "$date": "2025-04-26T04:37:39.504Z"
+  },
+  "returnDate": null,
+  "status": "Chưa trả",
+  "createdAt": {
+    "$date": "2025-04-26T04:37:39.505Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T04:37:39.505Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c8f785f8a3f447d72fde7"
+  },
+  "userId": {
+    "$oid": "68085315bf0b854cf5c239cb"
+  },
+  "bookId": {
+    "$oid": "680c8d42b98d6bd208f9327e"
+  },
+  "borrowDate": {
+    "$date": "2025-04-26T07:47:04.688Z"
+  },
+  "returnDate": {
+    "$date": "2025-04-26T07:47:23.912Z"
+  },
+  "status": "Đã Trả",
+  "createdAt": {
+    "$date": "2025-04-26T07:47:04.688Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T07:47:23.912Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c90abbc2b83d61bbcc1fe"
+  },
+  "userId": {
+    "$oid": "68085315bf0b854cf5c239cb"
+  },
+  "bookId": {
+    "$oid": "680c8d42b98d6bd208f9327e"
+  },
+  "borrowDate": {
+    "$date": "2025-04-26T07:52:11.911Z"
+  },
+  "returnDate": null,
+  "status": "Chưa trả",
+  "createdAt": {
+    "$date": "2025-04-26T07:52:11.912Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T07:52:11.912Z"
+  },
+  "__v": 0
+}]

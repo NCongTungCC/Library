@@ -4,13 +4,13 @@ const CategoryService = require('../service/categoryService');
 const LogService = require('../service/logService');
 
 class CategoryController {
-    constructor(CategoryServiceInstance, logServiceInstance) {
-        this.CategoryServiceInstance = CategoryServiceInstance;
-        this.logServiceInstance = logServiceInstance;
+    constructor(CategoryService, logService) {
+        this.CategoryService = CategoryService;
+        this.logService = logService;
     }
 
     getCategory = async (req, res) => {
-        const result = await this.CategoryServiceInstance.getCategory();
+        const result = await this.CategoryService.getCategory();
         if(result.code !== 200) {
             return res.status(result.code).json({
                 code : result.code,
@@ -25,14 +25,14 @@ class CategoryController {
     }
     createCategory = async (req, res) => {
         const {tentheloai, mota} = req.body;
-        const result = await this.CategoryServiceInstance.createCategory({tentheloai, mota});
+        const result = await this.CategoryService.createCategory({tentheloai, mota});
         if(result.code !== 200) {
             return res.status(result.code).json({
                 code : result.code,
                 message : result.message,
             })
            } else
-            await this.logServiceInstance.CreateLog({userId : req.user?.id, hanhdong : 'Thêm thể loại',});
+            await this.logService.CreateLog({userId : req.user?.id, hanhdong : 'Thêm thể loại',});
             return res.status(200).json({
                 code : 200,
                 message : result.message,
@@ -40,14 +40,14 @@ class CategoryController {
     }
     deleteCategory = async (req, res) => {
         const {id} = req.params;
-        const result = await this.CategoryServiceInstance.deleteCategory({id});
+        const result = await this.CategoryService.deleteCategory({id});
         if(result.code !== 200) {
             return res.status(result.code).json({
                 code : result.code,
                 message : result.message,
             })
            } else
-            await this.logServiceInstance.CreateLog({userId : req.user?.id, hanhdong : 'Xóa thể loại',});
+            await this.logService.CreateLog({userId : req.user?.id, hanhdong : 'Xóa thể loại',});
             return res.status(200).json({
                 code : 200,
                 message : result.message,
@@ -56,14 +56,14 @@ class CategoryController {
     updateCategory = async (req, res) => {
         const {id} = req.params;
         const {tentheloai, mota} = req.body;
-        const result = await this.CategoryServiceInstance.updateCategory({id, tentheloai, mota});
+        const result = await this.CategoryService.updateCategory({id, tentheloai, mota});
         if(result.code !== 200) {
             return res.status(result.code).json({
                 code : result.code,
                 message : result.message,
             })
            } else
-           await this.logServiceInstance.CreateLog({userId : req.user?.id, hanhdong : 'Sửa thể loại',});
+           await this.logService.CreateLog({userId : req.user?.id, hanhdong : 'Sửa thể loại',});
             return res.status(200).json({
                 code : 200,
                 message : result.message,

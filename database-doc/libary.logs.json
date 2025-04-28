@@ -1,0 +1,250 @@
+[{
+  "_id": {
+    "$oid": "680c8da5e9fa8b3a5b9be160"
+  },
+  "userId": {
+    "$oid": "680c4e099359f579c6cebf8f"
+  },
+  "bookId": {
+    "$oid": "680c8da5e9fa8b3a5b9be15e"
+  },
+  "hanhdong": "Tạo sách",
+  "time": {
+    "$date": "2025-04-26T07:39:17.078Z"
+  },
+  "createdAt": {
+    "$date": "2025-04-26T07:39:17.078Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T07:39:17.078Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c8e848664b67fe2b0194e"
+  },
+  "userId": {
+    "$oid": "680c8d5c9ad6093a29662fbe"
+  },
+  "bookId": {
+    "$oid": "680c8d5c9ad6093a29662fbe"
+  },
+  "hanhdong": "Xóa sách",
+  "time": {
+    "$date": "2025-04-26T07:43:00.355Z"
+  },
+  "createdAt": {
+    "$date": "2025-04-26T07:43:00.358Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T07:43:00.358Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c8f785f8a3f447d72fde9"
+  },
+  "userId": {
+    "$oid": "68085315bf0b854cf5c239cb"
+  },
+  "bookId": {
+    "$oid": "680c8d42b98d6bd208f9327e"
+  },
+  "hanhdong": "Mượn sách",
+  "time": {
+    "$date": "2025-04-26T07:47:04.692Z"
+  },
+  "createdAt": {
+    "$date": "2025-04-26T07:47:04.692Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T07:47:04.692Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c8f8b5f8a3f447d72fdef"
+  },
+  "userId": {
+    "$oid": "68085315bf0b854cf5c239cb"
+  },
+  "bookId": {
+    "$oid": "680c8d42b98d6bd208f9327e"
+  },
+  "hanhdong": "Trả sách",
+  "time": {
+    "$date": "2025-04-26T07:47:23.916Z"
+  },
+  "createdAt": {
+    "$date": "2025-04-26T07:47:23.917Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T07:47:23.917Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c8fa55f8a3f447d72fdf4"
+  },
+  "userId": {
+    "$oid": "680c4e099359f579c6cebf8f"
+  },
+  "bookId": {
+    "$oid": "680c8fa55f8a3f447d72fdf2"
+  },
+  "hanhdong": "Tạo sách",
+  "time": {
+    "$date": "2025-04-26T07:47:49.378Z"
+  },
+  "createdAt": {
+    "$date": "2025-04-26T07:47:49.379Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T07:47:49.379Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c951bad70549ae72bd131"
+  },
+  "userId": {
+    "$oid": "680c4e099359f579c6cebf8f"
+  },
+  "hanhdong": "Thêm thể loại",
+  "time": {
+    "$date": "2025-04-26T08:11:07.683Z"
+  },
+  "createdAt": {
+    "$date": "2025-04-26T08:11:07.685Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T08:11:07.685Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c957dfd799435270f8585"
+  },
+  "userId": {
+    "$oid": "680c4e099359f579c6cebf8f"
+  },
+  "bookId": null,
+  "hanhdong": "Thêm thể loại",
+  "time": {
+    "$date": "2025-04-26T08:12:45.280Z"
+  },
+  "createdAt": {
+    "$date": "2025-04-26T08:12:45.280Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T08:12:45.280Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c959cfd799435270f858a"
+  },
+  "userId": {
+    "$oid": "680c4e099359f579c6cebf8f"
+  },
+  "bookId": null,
+  "hanhdong": "Tạo sách",
+  "time": {
+    "$date": "2025-04-26T08:13:16.607Z"
+  },
+  "createdAt": {
+    "$date": "2025-04-26T08:13:16.607Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T08:13:16.607Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c95bfd330141ab23a2a57"
+  },
+  "userId": {
+    "$oid": "680c4e099359f579c6cebf8f"
+  },
+  "hanhdong": "Tạo sách",
+  "time": {
+    "$date": "2025-04-26T08:13:51.156Z"
+  },
+  "createdAt": {
+    "$date": "2025-04-26T08:13:51.157Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T08:13:51.157Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c95dbf7e890010685e263"
+  },
+  "userId": {
+    "$oid": "680c4e099359f579c6cebf8f"
+  },
+  "bookId": {
+    "$oid": "680c95dbf7e890010685e261"
+  },
+  "hanhdong": "Tạo sách",
+  "time": {
+    "$date": "2025-04-26T08:14:19.872Z"
+  },
+  "createdAt": {
+    "$date": "2025-04-26T08:14:19.874Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T08:14:19.874Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c95e8f7e890010685e268"
+  },
+  "userId": {
+    "$oid": "680c4e099359f579c6cebf8f"
+  },
+  "bookId": null,
+  "hanhdong": "Thêm thể loại",
+  "time": {
+    "$date": "2025-04-26T08:14:32.167Z"
+  },
+  "createdAt": {
+    "$date": "2025-04-26T08:14:32.168Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T08:14:32.168Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c98745860b5b7cadda827"
+  },
+  "userId": {
+    "$oid": "680c4e099359f579c6cebf8f"
+  },
+  "bookId": null,
+  "hanhdong": "Sửa thể loại",
+  "time": {
+    "$date": "2025-04-26T08:25:24.293Z"
+  },
+  "createdAt": {
+    "$date": "2025-04-26T08:25:24.296Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T08:25:24.296Z"
+  },
+  "__v": 0
+}]

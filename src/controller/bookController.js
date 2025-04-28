@@ -52,7 +52,7 @@ class BookController {
              message : result.message,
          })
         } else {
-         await logServiceInstance.CreateLog({userId : id, bookId : result.data._id, hanhdong : 'Xóa sách',});
+         await logServiceInstance.CreateLog({userId : req.user?.id, bookId : id, hanhdong : 'Xóa sách',});
          return res.status(200).json({
              code : 200,
              message : result.message,

@@ -1,9 +1,9 @@
 const Book = require('../models/bookModel');
 const Borrow = require('../models/borrowingModel');
 const User = require('../models/userModel');
-const Statistic = require('../service/statisticService');
+const StatisticService = require('../service/statisticService');
 
-const StatisticInstance = new Statistic(Book, Borrow, User);
+const StatisticInstance = new StatisticService(Book, Borrow, User);
 
 class StatisticController {
     constructor(StatisticInstance) {

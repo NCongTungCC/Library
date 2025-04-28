@@ -1,0 +1,168 @@
+[{
+  "_id": {
+    "$oid": "680c52a83a87318d6c05f4f3"
+  },
+  "tensach": "tungtungtungsahur",
+  "tacgia": "Tùng",
+  "namxuatban": 2019,
+  "mota": "Truyện Anime",
+  "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
+  "soluong": 6,
+  "theloai": "Hành động",
+  "nguoitao": "tungtungtungsahur",
+  "nguoicapnhat": "tungtungtungsahur",
+  "createdAt": {
+    "$date": "2025-04-26T03:27:36.559Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T04:37:39.498Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c8d186fed5b0a8d8a5f42"
+  },
+  "tensach": "sahura",
+  "tacgia": "Tùng",
+  "namxuatban": 2019,
+  "mota": "Truyện Anime",
+  "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
+  "soluong": 10,
+  "theloai": "Hành động",
+  "nguoitao": "tungtungtungsahur",
+  "nguoicapnhat": null,
+  "createdAt": {
+    "$date": "2025-04-26T07:36:56.435Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T07:36:56.435Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c8d42b98d6bd208f9327e"
+  },
+  "tensach": "sahura",
+  "tacgia": "Tùng",
+  "namxuatban": 2019,
+  "mota": "Truyện Anime",
+  "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
+  "soluong": 9,
+  "theloai": "Hành động",
+  "nguoitao": "tungtungtungsahur",
+  "nguoicapnhat": null,
+  "createdAt": {
+    "$date": "2025-04-26T07:37:38.277Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T07:52:11.902Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c8d44b98d6bd208f93282"
+  },
+  "tensach": "sahura",
+  "tacgia": "Tùng",
+  "namxuatban": 2019,
+  "mota": "Truyện Anime",
+  "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
+  "soluong": 10,
+  "theloai": "Hành động",
+  "nguoitao": "tungtungtungsahur",
+  "nguoicapnhat": null,
+  "createdAt": {
+    "$date": "2025-04-26T07:37:40.989Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T07:37:40.989Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c8fa55f8a3f447d72fdf2"
+  },
+  "tensach": "sahura",
+  "tacgia": "Tùng",
+  "namxuatban": 2019,
+  "mota": "Truyện Anime",
+  "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
+  "soluong": 10,
+  "theloai": "Hành động",
+  "nguoitao": "tungtungtungsahur",
+  "nguoicapnhat": null,
+  "createdAt": {
+    "$date": "2025-04-26T07:47:49.376Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T07:47:49.376Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c959cfd799435270f8588"
+  },
+  "tensach": "tungtungtungtungsahura",
+  "tacgia": "Tùng",
+  "namxuatban": 2019,
+  "mota": "Truyện Anime",
+  "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
+  "soluong": 10,
+  "theloai": "Hành động",
+  "nguoitao": "tungtungtungsahur",
+  "nguoicapnhat": null,
+  "createdAt": {
+    "$date": "2025-04-26T08:13:16.604Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T08:13:16.604Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c95bfd330141ab23a2a55"
+  },
+  "tensach": "tungtungtungtungsahura",
+  "tacgia": "Tùng",
+  "namxuatban": 2019,
+  "mota": "Truyện Anime",
+  "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
+  "soluong": 10,
+  "theloai": "Hành động",
+  "nguoitao": "tungtungtungsahur",
+  "nguoicapnhat": null,
+  "createdAt": {
+    "$date": "2025-04-26T08:13:51.151Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T08:13:51.151Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c95dbf7e890010685e261"
+  },
+  "tensach": "tungtungtungtungsahura",
+  "tacgia": "Tùng",
+  "namxuatban": 2019,
+  "mota": "Truyện Anime",
+  "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
+  "soluong": 10,
+  "theloai": "Hành động",
+  "nguoitao": "tungtungtungsahur",
+  "nguoicapnhat": null,
+  "createdAt": {
+    "$date": "2025-04-26T08:14:19.866Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T08:14:19.866Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "680c7ecbf4e3bc7b932c7007"
+  },
+  "tentheloai": "Hành động",
+  "mota": "Phá án",
+  "createdAt": {
+    "$date": "2025-04-26T06:35:55.641Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T06:35:55.641Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c7ed0f4e3bc7b932c700a"
+  },
+  "tentheloai": "Trinh thám",
+  "mota": "Phá",
+  "createdAt": {
+    "$date": "2025-04-26T06:36:00.448Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T06:36:00.448Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c951bad70549ae72bd12f"
+  },
+  "tentheloai": "Kinh dị",
+  "mota": "Phá án",
+  "createdAt": {
+    "$date": "2025-04-26T08:11:07.670Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T08:11:07.670Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c957dfd799435270f8583"
+  },
+  "tentheloai": "Giật gân",
+  "mota": "Phá án 3",
+  "createdAt": {
+    "$date": "2025-04-26T08:12:45.269Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T08:12:45.269Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c95e8f7e890010685e266"
+  },
+  "tentheloai": "Giậtgân",
+  "mota": "Phá án 3",
+  "createdAt": {
+    "$date": "2025-04-26T08:14:32.165Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T08:25:24.281Z"
+  },
+  "__v": 0
+}]
