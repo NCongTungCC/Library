@@ -9,19 +9,27 @@ class StatisticService {
         this.User = User;
     }
     async getStatistic() {
-        const countBook = await this.Book.countDocuments();
+
+        const countBook = await this.Book.find();
+        const totalBook = countBook.reduce((sum, book) => sum + book.totalBook, 0 );
+        const totalBookAvailable = countBook.reduce((sum, book) => sum + book.availableBook, 0 );
         const countUser = await this.User.countDocuments();
-        const booksBorrowed = await this.Borrow.countDocuments({ returnDate: null });
+        const booksBorrowed = await this.Borrow.countDocuments({ 
+            status: { $in: ['Chưa trả', 'Chờ xác nhận'] } 
+        });
+        const booksReturned = await this.Borrow.countDocuments({ status: 'Đã trả' });
 
         return {
             code: 200,
-            message : 'Lấy thành công thống kê',
+            message: 'Lấy thành công thống kê',
             data: {
-                countBook,
-                countUser,
-                booksBorrowed,
+                tongSoSach: totalBook,
+                tongUser: countUser,
+                soSachDangMuon: booksBorrowed,
+                soSachDaTra: booksReturned,
+                soSachConSan: totalBookAvailable,
             }
-    }
+        };
 }
 }
 

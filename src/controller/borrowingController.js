@@ -28,8 +28,8 @@ class BrrowController {
     return res.status(200).json({
         code : 200,
         message : result.message,
-        data: result.data
     })
+
 }
     returnBook = async (req, res) => {
     const id = req.user.id;
@@ -46,22 +46,19 @@ class BrrowController {
     return res.status(200).json({
         code : 200,
         message : result.message,
-        data: result.data
     })
 }
     confirmReturn = async (req, res) => {
-        const userId = req.user?.id;
+        const userId = req.user.id;
         const { borrowId } = req.params;
 
-        const result = await this.BorrowServiceInstance.ConfirmReturn({userId, borrowId});
+        const result = await this.BorrowServiceInstance.ConfirmReturn({borrowId : borrowId, userId : userId});
         if(result.code !== 200) {
             return res.status(result.code).json({
                 code : result.code,
                 message : result.message,
             })
-        } else 
-        await this.logServiceInstance.CreateLog({userId, borrowId, hanhdong : 'Trả sách',});
-        return res.status(200).json({
+        } else return res.status(200).json({
             code : 200,
             message : result.message,
             data : result.data,
