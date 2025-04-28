@@ -14,7 +14,11 @@ mota         String
 
 poster       String
 
-soluong      Int
+totalBook    Int
+
+borrowBook   Int
+
+availableBook Int 
 
 nguoitao     String
 
