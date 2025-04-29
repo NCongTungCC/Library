@@ -1,100 +1,50 @@
 [{
   "_id": {
-    "$oid": "680f4fe8e973f66945edcde7"
+    "$oid": "68103c3f0f8fb4d15242dac0"
   },
   "userId": {
-    "$oid": "680c4e099359f579c6cebf8f"
+    "$oid": "68103949ad05de07ed33ea9a"
   },
   "bookId": {
-    "$oid": "680f4e9657e85c93eef536e6"
+    "$oid": "68103a91796d53f59df0346c"
   },
   "borrowDate": {
-    "$date": "2025-04-28T09:52:40.927Z"
+    "$date": "2025-04-29T02:41:03.451Z"
   },
   "returnDate": {
-    "$date": "2025-04-28T09:58:07.989Z"
+    "$date": "2025-04-29T02:41:16.440Z"
   },
   "status": "Đã trả",
   "createdAt": {
-    "$date": "2025-04-28T09:52:40.930Z"
+    "$date": "2025-04-29T02:41:03.452Z"
   },
   "updatedAt": {
-    "$date": "2025-04-28T09:58:17.928Z"
+    "$date": "2025-04-29T02:41:59.438Z"
   },
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "680f505f647ce2577e00b9a5"
+    "$oid": "68103ca1388aba12f2c9a8ab"
   },
   "userId": {
-    "$oid": "680c4e099359f579c6cebf8f"
+    "$oid": "68103949ad05de07ed33ea9a"
   },
   "bookId": {
-    "$oid": "680f4ed9eff3f2b33281a4c0"
+    "$oid": "68103a91796d53f59df0346c"
   },
   "borrowDate": {
-    "$date": "2025-04-28T09:54:39.092Z"
+    "$date": "2025-04-29T02:42:41.579Z"
   },
   "returnDate": {
-    "$date": "2025-04-28T09:57:21.975Z"
+    "$date": "2025-04-29T02:42:44.586Z"
   },
-  "status": "Đã trả",
+  "status": "Chờ xác nhận",
   "createdAt": {
-    "$date": "2025-04-28T09:54:39.094Z"
+    "$date": "2025-04-29T02:42:41.585Z"
   },
   "updatedAt": {
-    "$date": "2025-04-28T09:57:34.488Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "680f529ccdf29e60c87cb7f7"
-  },
-  "userId": {
-    "$oid": "680c4e099359f579c6cebf8f"
-  },
-  "bookId": {
-    "$oid": "680f4e9657e85c93eef536e6"
-  },
-  "borrowDate": {
-    "$date": "2025-04-28T10:04:12.767Z"
-  },
-  "returnDate": {
-    "$date": "2025-04-28T10:04:17.083Z"
-  },
-  "status": "Đã trả",
-  "createdAt": {
-    "$date": "2025-04-28T10:04:12.768Z"
-  },
-  "updatedAt": {
-    "$date": "2025-04-28T10:04:31.272Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "680f532fcdf29e60c87cb809"
-  },
-  "userId": {
-    "$oid": "680c4e099359f579c6cebf8f"
-  },
-  "bookId": {
-    "$oid": "680f4e9657e85c93eef536e6"
-  },
-  "borrowDate": {
-    "$date": "2025-04-28T10:06:39.530Z"
-  },
-  "returnDate": {
-    "$date": "2025-04-28T10:08:47.473Z"
-  },
-  "status": "Đã trả",
-  "createdAt": {
-    "$date": "2025-04-28T10:06:39.531Z"
-  },
-  "updatedAt": {
-    "$date": "2025-04-28T10:08:57.567Z"
+    "$date": "2025-04-29T02:42:44.588Z"
   },
   "__v": 0
 }]

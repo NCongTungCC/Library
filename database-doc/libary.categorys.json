@@ -1,42 +1,42 @@
 [{
   "_id": {
-    "$oid": "68102ef55f9cfc4a44725ec4"
+    "$oid": "6810399c796d53f59df0345e"
   },
-  "tentheloai": "Giật gân",
-  "mota": "Phá án 3",
+  "category": "Trinh thám",
+  "description": "Phá án",
   "createdAt": {
-    "$date": "2025-04-29T01:44:21.422Z"
+    "$date": "2025-04-29T02:29:48.659Z"
   },
   "updatedAt": {
-    "$date": "2025-04-29T01:44:21.422Z"
+    "$date": "2025-04-29T02:29:48.659Z"
   },
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "68102f005f9cfc4a44725ec9"
+    "$oid": "681039b3796d53f59df03463"
   },
-  "tentheloai": "Hành động",
-  "mota": "Phá án 3",
+  "category": "Hành động",
+  "description": "Đánh nhau",
   "createdAt": {
-    "$date": "2025-04-29T01:44:32.482Z"
+    "$date": "2025-04-29T02:30:11.585Z"
   },
   "updatedAt": {
-    "$date": "2025-04-29T01:44:32.482Z"
+    "$date": "2025-04-29T02:30:11.585Z"
   },
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "68102f095f9cfc4a44725ece"
+    "$oid": "68103ad7796d53f59df03478"
   },
-  "tentheloai": "Trinh thám",
-  "mota": "Phá án 3",
+  "category": "Kinh dị",
+  "description": "Phim kinh dị",
   "createdAt": {
-    "$date": "2025-04-29T01:44:41.401Z"
+    "$date": "2025-04-29T02:35:03.016Z"
   },
   "updatedAt": {
-    "$date": "2025-04-29T01:44:41.401Z"
+    "$date": "2025-04-29T02:36:11.137Z"
   },
   "__v": 0
 }]

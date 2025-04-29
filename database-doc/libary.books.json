@@ -1,115 +1,210 @@
 [{
   "_id": {
-    "$oid": "680f4e9657e85c93eef536e6"
+    "$oid": "68103a91796d53f59df0346c"
   },
-  "tensach": "tungtungtungtungsahura",
-  "tacgia": "Tùng",
-  "namxuatban": 2019,
-  "mota": "Truyện Anime",
+  "namebook": "tung tung tung sahur",
+  "author": "Tùng",
+  "year": 2019,
+  "description": "Truyện Anime",
   "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
-  "totalBook": 10,
-  "availableBook": 10,
-  "borrowBook": 0,
-  "theloai": "Hành động",
-  "nguoitao": "tungtungtungsahur",
-  "nguoicapnhat": null,
+  "totalBook": 32,
+  "availableBook": 31,
+  "borrowBook": 1,
+  "categoryId": {
+    "$oid": "6810399c796d53f59df0345e"
+  },
+  "user": "tungtungtungsahur",
+  "userupdate": null,
   "createdAt": {
-    "$date": "2025-04-28T09:47:02.778Z"
+    "$date": "2025-04-29T02:33:53.902Z"
   },
   "updatedAt": {
-    "$date": "2025-04-28T10:08:57.563Z"
+    "$date": "2025-04-29T02:42:41.575Z"
   },
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "680f4ed9eff3f2b33281a4c0"
+    "$oid": "68103ab6796d53f59df03473"
   },
-  "tensach": "tungtungtungtung",
-  "tacgia": "Tùng",
-  "namxuatban": 2019,
-  "mota": "Truyện Anime",
-  "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
-  "totalBook": 10,
-  "availableBook": 10,
-  "borrowBook": 0,
-  "theloai": "Hành động",
-  "nguoitao": "tungtungtungsahur",
-  "nguoicapnhat": null,
-  "createdAt": {
-    "$date": "2025-04-28T09:48:09.644Z"
-  },
-  "updatedAt": {
-    "$date": "2025-04-28T09:48:09.644Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "680f54b5cdf29e60c87cb819"
-  },
-  "tensach": "tungtungtungtung",
-  "tacgia": "Tùng",
-  "namxuatban": 2019,
-  "mota": "Truyện Anime",
+  "namebook": "tralele tralala",
+  "author": "Tùng",
+  "year": 2019,
+  "description": "Truyện Anime",
   "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
   "totalBook": 32,
   "availableBook": 32,
   "borrowBook": 0,
-  "theloai": "Hành động",
-  "nguoitao": "tungtungtungsahur",
-  "nguoicapnhat": null,
+  "categoryId": {
+    "$oid": "681039b3796d53f59df03463"
+  },
+  "user": "tungtungtungsahur",
+  "userupdate": null,
   "createdAt": {
-    "$date": "2025-04-28T10:13:09.958Z"
+    "$date": "2025-04-29T02:34:30.935Z"
   },
   "updatedAt": {
-    "$date": "2025-04-28T10:13:09.958Z"
+    "$date": "2025-04-29T02:34:30.935Z"
   },
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "680f54c1cdf29e60c87cb81e"
+    "$oid": "68103c090f8fb4d15242dab9"
   },
-  "tensach": "bachilini",
-  "tacgia": "Tùng",
-  "namxuatban": 2019,
-  "mota": "Truyện Anime",
+  "namebook": "bodilo crocodilo",
+  "author": "Tùng",
+  "year": 2019,
+  "description": "Truyện Anime",
   "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
   "totalBook": 32,
   "availableBook": 32,
   "borrowBook": 0,
-  "theloai": "Hành động",
-  "nguoitao": "tungtungtungsahur",
-  "nguoicapnhat": null,
+  "categoryId": {
+    "$oid": "68103ad7796d53f59df03478"
+  },
+  "user": "tungtungtungsahur",
+  "userupdate": null,
   "createdAt": {
-    "$date": "2025-04-28T10:13:21.800Z"
+    "$date": "2025-04-29T02:40:09.080Z"
   },
   "updatedAt": {
-    "$date": "2025-04-28T10:13:21.800Z"
+    "$date": "2025-04-29T02:40:09.080Z"
   },
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "680f54cacdf29e60c87cb823"
+    "$oid": "681042e890e4a954e7ce7f61"
   },
-  "tensach": "bachilini monkry",
-  "tacgia": "Tùng",
-  "namxuatban": 2019,
-  "mota": "Truyện Anime",
+  "namebook": "bodilo crocodilo co",
+  "author": "Tùng",
+  "year": 2019,
+  "description": "Truyện Anime",
   "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
   "totalBook": 32,
   "availableBook": 32,
   "borrowBook": 0,
-  "theloai": "Hành động",
-  "nguoitao": "tungtungtungsahur",
-  "nguoicapnhat": null,
+  "categoryId": {
+    "$oid": "68103ad7796d53f59df03478"
+  },
+  "user": "tungtungtungsahur",
+  "userupdate": null,
   "createdAt": {
-    "$date": "2025-04-28T10:13:30.374Z"
+    "$date": "2025-04-29T03:09:28.094Z"
   },
   "updatedAt": {
-    "$date": "2025-04-28T10:13:30.374Z"
+    "$date": "2025-04-29T03:09:28.094Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6810448aa74dbc46978daac6"
+  },
+  "namebook": "bodilo crocodilo c",
+  "author": "Tùng",
+  "year": 2019,
+  "description": "Truyện Anime",
+  "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
+  "totalBook": 32,
+  "availableBook": 32,
+  "borrowBook": 0,
+  "categoryId": {
+    "$oid": "68103ad7796d53f59df03478"
+  },
+  "user": "tungtungtungsahur",
+  "userupdate": null,
+  "createdAt": {
+    "$date": "2025-04-29T03:16:26.741Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T03:16:26.741Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681045f93a08c61745ccc1e4"
+  },
+  "namebook": "bolili bichili",
+  "author": "Tùng",
+  "year": 2019,
+  "description": "Truyện Anime",
+  "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
+  "totalBook": 32,
+  "availableBook": 32,
+  "borrowBook": 0,
+  "categoryId": {
+    "$oid": "68103ad7796d53f59df03478"
+  },
+  "user": "tungtungtungsahur",
+  "userupdate": null,
+  "createdAt": {
+    "$date": "2025-04-29T03:22:33.643Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T03:22:33.643Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681046493558c9e5e0437150"
+  },
+  "namebook": "bolili bichilili",
+  "author": "Tùng",
+  "year": 2019,
+  "description": "Truyện Anime",
+  "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
+  "totalBook": 32,
+  "availableBook": 32,
+  "borrowBook": 0,
+  "categoryId": [
+    {
+      "$oid": "68103ad7796d53f59df03478"
+    },
+    {
+      "$oid": "681039b3796d53f59df03463"
+    }
+  ],
+  "user": "tungtungtungsahur",
+  "userupdate": null,
+  "createdAt": {
+    "$date": "2025-04-29T03:23:53.483Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T03:23:53.483Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681046e18d67dbcd7b1f24c7"
+  },
+  "namebook": "bolili bichililia",
+  "author": "Tùng",
+  "year": 2019,
+  "description": "Truyện Anime",
+  "poster": "https://i.pinimg.com/236x/60/0f/8e/600f8edce7e9c1cd2e8137365c128513.jpg",
+  "totalBook": 32,
+  "availableBook": 32,
+  "borrowBook": 0,
+  "categoryId": [
+    {
+      "$oid": "68103ad7796d53f59df03478"
+    },
+    {
+      "$oid": "681039b3796d53f59df03463"
+    }
+  ],
+  "user": "tungtungtungsahur",
+  "userupdate": null,
+  "createdAt": {
+    "$date": "2025-04-29T03:26:25.024Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T03:26:25.024Z"
   },
   "__v": 0
 }]
