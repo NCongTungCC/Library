@@ -33,11 +33,21 @@ class BookService {
                 message : 'Đã có sách',
             }
         }
-        const categorys = await this.Category.findOne({category : category});
-        if(!categorys) {
-            return { 
+        const newCategory = Array.isArray(category) ? category : category.split(', ');
+
+        const categoryDocs = await Promise.all(
+            newCategory.map(async (item) => {
+                const categoryDoc = await this.Category.findOne({ category: item });
+                if (!categoryDoc) {
+                    throw new Error(`Không tìm thấy thể loại: ${item}`);
+                }
+                return categoryDoc._id;
+            })
+        );
+        if(totalBook < 1) {
+            return {
                 code : 404,
-                message : 'Không tìm thấy thể loại',
+                message : 'Nhập sai số lượng',
             }
         }
         const newBook = new this.Book({
@@ -48,7 +58,7 @@ class BookService {
             description,
             totalBook,
             availableBook : totalBook,
-            categoryId : categorys._id,
+            categoryId : categoryDocs,
             user : nameUser,
         })
         await newBook.save();

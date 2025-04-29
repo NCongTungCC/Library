@@ -33,10 +33,10 @@ const BookSchema = new mongoose.Schema({
         type : Number,
         default : 0,
     },
-    categoryId : {
-        type : String,
+    categoryId : [ {
+        type : mongoose.Types.ObjectId,
         required : true,
-    }, 
+    } ], 
     user : {
         type : String,
         required : true,
