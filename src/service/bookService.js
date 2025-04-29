@@ -91,13 +91,17 @@ class BookService {
                     message : 'Không tìm thấy sách',
                 }
             }
-        const categorys = await this.Category.findOne({category : category});
-            if(!categorys) {
-                return { 
-                    code : 404,
-                    message : 'Không tìm thấy thể loại',
+        const newCategory = Array.isArray(category) ? category : category.split(', ');
+
+        const categoryDocs = await Promise.all(
+            newCategory.map(async (item) => {
+                const categoryDoc = await this.Category.findOne({ category: item });
+                if (!categoryDoc) {
+                    throw new Error(`Không tìm thấy thể loại: ${item}`);
                 }
-            }
+                return categoryDoc._id;
+                })
+            );
         const user = await this.User.findOne({_id : userId});
         const username = user.username;
             await book.updateOne({namebook, author, year, description, poster, totalBook, categoryId : categorys._id, userupdate : username});
