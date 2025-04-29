@@ -13,17 +13,17 @@ class UserService {
             return {
             code:404,
             message : "Tài khoản không tồn tại",
-        }}
+        }};
         if(user.password !== password) {
             return {
                 code:404,
                 message : "Sai mật khẩu",
-            }}
+            }};
         const token = this.generateToken(user);
         return {
             code : 200,
             token : token,
-        }}
+        }};
     async signupService( { username, password, birthday, gender } ) {
         const user = await this.User.findOne({ username });
         if(user) {

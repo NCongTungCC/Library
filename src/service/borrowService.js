@@ -21,7 +21,7 @@ class BorrowService {
             const borrow = await this.Borrow.findOne({
                 bookId: bookId, 
                 userId: userId,
-                returnDate: null, 
+                status: { $ne: 'Đã trả' }
             });
             if (borrow) {
                 return {
