@@ -1,1 +1,42 @@
-[]
+[{
+  "_id": {
+    "$oid": "68102ef55f9cfc4a44725ec4"
+  },
+  "tentheloai": "Giật gân",
+  "mota": "Phá án 3",
+  "createdAt": {
+    "$date": "2025-04-29T01:44:21.422Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T01:44:21.422Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68102f005f9cfc4a44725ec9"
+  },
+  "tentheloai": "Hành động",
+  "mota": "Phá án 3",
+  "createdAt": {
+    "$date": "2025-04-29T01:44:32.482Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T01:44:32.482Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68102f095f9cfc4a44725ece"
+  },
+  "tentheloai": "Trinh thám",
+  "mota": "Phá án 3",
+  "createdAt": {
+    "$date": "2025-04-29T01:44:41.401Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T01:44:41.401Z"
+  },
+  "__v": 0
+}]
