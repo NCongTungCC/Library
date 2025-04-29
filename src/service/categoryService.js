@@ -19,17 +19,17 @@ class CategoryService {
             data : category,
         }
     }
-    async createCategory({tentheloai, mota}) {
-        const category = await this.Category.findOne({tentheloai});
-        if(category) {
+    async createCategory({category, description}) {
+        const categorys = await this.Category.findOne({category});
+        if(categorys) {
             return {
                 code : 400,
                 message : 'Đã có thể loại rồi',
             }
         }
         const newCategory = new this.Category({
-            tentheloai,
-            mota,
+            category,
+            description,
         })
         await newCategory.save();
         return {
@@ -51,15 +51,15 @@ class CategoryService {
             message : 'Xóa thể loại thành công',
         }
     }
-    async updateCategory({id, tentheloai, mota}) {
-        const category = await this.Category.findOne({_id : id});
-        if(!category) {
+    async updateCategory({id, category, description}) {
+        const categorys = await this.Category.findOne({_id : id});
+        if(!categorys) {
             return {
                 code : 404,
                 message : 'Không tìm thấy thể loại',
             }
         }
-        await category.updateOne({tentheloai, mota});
+        await categorys.updateOne({category, description});
         return {
             code : 200,
             message : 'Sửa thành công'

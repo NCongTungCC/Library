@@ -9,7 +9,7 @@ const LogSchema = new mongoose.Schema({
         type : mongoose.Types.ObjectId,
         default : null,
     },
-    hanhdong : {
+    action : {
         type : String,
         required : true,
     },

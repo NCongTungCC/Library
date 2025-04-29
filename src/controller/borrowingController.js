@@ -24,7 +24,7 @@ class BrrowController {
             message : result.message,
         })
     } else 
-    await this.logServiceInstance.CreateLog({userId : id, bookId, hanhdong : 'Mượn sách',});
+    await this.logServiceInstance.CreateLog({userId : id, bookId, action : 'Mượn sách',});
     return res.status(200).json({
         code : 200,
         message : result.message,
@@ -42,7 +42,7 @@ class BrrowController {
             message : result.message,
         })
     } else 
-    await this.logServiceInstance.CreateLog({userId : id, bookId, hanhdong : 'Trả sách',});
+    await this.logServiceInstance.CreateLog({userId : id, bookId, action : 'Trả sách',});
     return res.status(200).json({
         code : 200,
         message : result.message,

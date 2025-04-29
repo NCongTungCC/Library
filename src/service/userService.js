@@ -37,7 +37,7 @@ class UserService {
             password : password,
             birthday : birthday,
             gender : gender,
-            isAdmin : false,
+            role : 'Người dùng',
         })
         await newUser.save();
         return {

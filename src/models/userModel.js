@@ -18,8 +18,8 @@ const UserSchema = new mongoose.Schema(
             type : String,
             required : true,
         },
-        isAdmin : {
-            type : Boolean,
+        role : {
+            type : String,
             required : true,
         }
     }, {

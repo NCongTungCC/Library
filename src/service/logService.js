@@ -5,11 +5,11 @@ class LogService {
         this.Log = Log;
     }
 
-    async CreateLog({userId, bookId, hanhdong}) {
+    async CreateLog({userId, bookId, action}) {
         await this.Log.create({
             userId,
             bookId,
-            hanhdong,
+            action,
         })
     }
 }

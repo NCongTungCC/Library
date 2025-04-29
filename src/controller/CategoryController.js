@@ -24,15 +24,15 @@ class CategoryController {
             })
     }
     createCategory = async (req, res) => {
-        const {tentheloai, mota} = req.body;
-        const result = await this.CategoryService.createCategory({tentheloai, mota});
+        const {category, description} = req.body;
+        const result = await this.CategoryService.createCategory({category, description});
         if(result.code !== 200) {
             return res.status(result.code).json({
                 code : result.code,
                 message : result.message,
             })
            } else
-            await this.logService.CreateLog({userId : req.user?.id, hanhdong : 'Thêm thể loại',});
+            await this.logService.CreateLog({userId : req.user?.id, action : 'Thêm thể loại',});
             return res.status(200).json({
                 code : 200,
                 message : result.message,
@@ -47,7 +47,7 @@ class CategoryController {
                 message : result.message,
             })
            } else
-            await this.logService.CreateLog({userId : req.user?.id, hanhdong : 'Xóa thể loại',});
+            await this.logService.CreateLog({userId : req.user?.id, action : 'Xóa thể loại',});
             return res.status(200).json({
                 code : 200,
                 message : result.message,
@@ -55,15 +55,15 @@ class CategoryController {
     }
     updateCategory = async (req, res) => {
         const {id} = req.params;
-        const {tentheloai, mota} = req.body;
-        const result = await this.CategoryService.updateCategory({id, tentheloai, mota});
+        const {category, description} = req.body;
+        const result = await this.CategoryService.updateCategory({id, category, description});
         if(result.code !== 200) {
             return res.status(result.code).json({
                 code : result.code,
                 message : result.message,
             })
            } else
-           await this.logService.CreateLog({userId : req.user?.id, hanhdong : 'Sửa thể loại',});
+           await this.logService.CreateLog({userId : req.user?.id, action : 'Sửa thể loại',});
             return res.status(200).json({
                 code : 200,
                 message : result.message,

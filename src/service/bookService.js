@@ -1,9 +1,12 @@
 const Book = require('../models/bookModel');
 const User = require('../models/userModel');
+const Category = require('../models/categoryModel');
+
 class BookService {
-    constructor(Book, User) {
+    constructor(Book, User, Category) {
         this.Book = Book;
         this.User = User;
+        this.Category = Category;
     }
 
     async getBookService() {
@@ -20,19 +23,33 @@ class BookService {
             data : book,
         }
     }
-    async createBookService({id, tensach, tacgia, namxuatban, mota, poster, totalBook, theloai}) {
-        const user = await this.User.findOne({_id : id});
+    async createBookService({id, namebook, author, year, description, poster, totalBook, category}) {
+        const user = await this.User.findOne({ _id : id});
         const nameUser = user.username;
+        const book = await this.Book.findOne({namebook});
+        if(book) {
+            return {
+                code : 400,
+                message : 'Đã có sách',
+            }
+        }
+        const categorys = await this.Category.findOne({category : category});
+        if(!categorys) {
+            return { 
+                code : 404,
+                message : 'Không tìm thấy thể loại',
+            }
+        }
         const newBook = new this.Book({
-            tensach,
-            tacgia,
-            namxuatban,
+            namebook,
+            author,
+            year,
             poster,
-            mota,
+            description,
             totalBook,
             availableBook : totalBook,
-            theloai,
-            nguoitao : nameUser,
+            categoryId : categorys._id,
+            user : nameUser,
         })
         await newBook.save();
         return {
@@ -56,7 +73,7 @@ class BookService {
             data : book,
         }
     }
-    async updateBookService({id, userId, tensach, tacgia, namxuatban, mota, poster, soluong, theloai}) {
+    async updateBookService({id, userId, namebook, author, year, description, poster, totalBook, category}) {
         const book = await this.Book.findOne({ _id : id });
             if(!book) {
                 return {
@@ -64,9 +81,16 @@ class BookService {
                     message : 'Không tìm thấy sách',
                 }
             }
+        const categorys = await this.Category.findOne({category : category});
+            if(!categorys) {
+                return { 
+                    code : 404,
+                    message : 'Không tìm thấy thể loại',
+                }
+            }
         const user = await this.User.findOne({_id : userId});
         const username = user.username;
-            await book.updateOne({tensach, tacgia, namxuatban, poster, mota, soluong, theloai, nguoicapnhat : username});
+            await book.updateOne({namebook, author, year, description, poster, totalBook, categoryId : categorys._id, userupdate : username});
             return{
                 code : 200,
                 message : 'Cập nhật thành công',

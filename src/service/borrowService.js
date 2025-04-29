@@ -106,7 +106,7 @@ class BorrowService {
                 }
             }
             const user = await this.User.findOne({ _id : userId});
-            if(user.isAdmin === false) {
+            if(user.role !== 'Admin') {
                 return {
                     code : 400,
                     message : 'Chỉ ADMIN mới có quyền xác nhận',

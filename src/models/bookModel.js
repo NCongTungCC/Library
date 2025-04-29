@@ -1,19 +1,19 @@
 const mongoose = require('mongoose');
 
 const BookSchema = new mongoose.Schema({
-    tensach : {
+    namebook : {
         type : String,
         required : true,
     },
-    tacgia : {
+    author : {
         type : String,
         required : true,
     },
-    namxuatban : {
+    year : {
         type : Number,
         required : true,
     },
-    mota : {
+    description : {
         type : String,
         required : true,
     },
@@ -33,15 +33,15 @@ const BookSchema = new mongoose.Schema({
         type : Number,
         default : 0,
     },
-    theloai : {
+    categoryId : {
         type : String,
         required : true,
     }, 
-    nguoitao : {
+    user : {
         type : String,
         required : true,
     },
-    nguoicapnhat : {
+    userupdate : {
         type : String,
         default : null,
     }

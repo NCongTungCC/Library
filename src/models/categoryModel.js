@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const CategorySchema = new mongoose.Schema({ 
-    tentheloai :{
+    category :{
         type : String,
         required : true,
     },
-    mota : {
+    description : {
         type : String,
         required : true,
     }

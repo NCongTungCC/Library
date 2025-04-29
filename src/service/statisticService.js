@@ -14,9 +14,7 @@ class StatisticService {
         const totalBook = countBook.reduce((sum, book) => sum + book.totalBook, 0 );
         const totalBookAvailable = countBook.reduce((sum, book) => sum + book.availableBook, 0 );
         const countUser = await this.User.countDocuments();
-        const booksBorrowed = await this.Borrow.countDocuments({ 
-            status: { $in: ['Chưa trả', 'Chờ xác nhận'] } 
-        });
+        const booksBorrowed = countBook.reduce((sum, book) => sum + book.borrowBook, 0 );
         const booksReturned = await this.Borrow.countDocuments({ status: 'Đã trả' });
 
         return {
