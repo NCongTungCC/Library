@@ -1,6 +1,6 @@
 const User = require('../models/userModel');
 const generateToken = require('../middleware/generateToken');
-
+const bcrypt = require('bcrypt');
 class UserService {
     constructor(User, generateToken) { 
         this.User = User;
@@ -14,7 +14,8 @@ class UserService {
             code:404,
             message : "Tài khoản không tồn tại",
         }};
-        if(user.password !== password) {
+        const isPasswordMatch = await bcrypt.compare(password,user.password);
+        if(!isPasswordMatch) {
             return {
                 code:404,
                 message : "Sai mật khẩu",
@@ -22,7 +23,8 @@ class UserService {
         const token = this.generateToken(user);
         return {
             code : 200,
-            token : token,
+            accessToken : token.accessToken,
+            refreshToken : token.refreshToken,
         }};
     async signupService( { username, password, birthday, gender } ) {
         const user = await this.User.findOne({ username });
@@ -32,9 +34,10 @@ class UserService {
             message : "Đã có tài khoản.",
         }
     }
+        const hashedPassword = await bcrypt.hash(password, 10);
         const newUser = new this.User({
             username : username,
-            password : password,
+            password : hashedPassword,
             birthday : birthday,
             gender : gender,
             role : 'Người dùng',
@@ -51,12 +54,17 @@ class UserService {
             code:404,
             message : "Tài khoản không tồn tại",
         }}
-        if(user.password === password ) {
+        const isMatchPassword = await bcrypt(password, user.password);
+        if(isMatchPassword) {
             await user.updateOne({ password: newPassword });
             return {
             code:200,
             message: 'Cập nhật thông tin thành công',
-        }}
+        }} 
+        return {
+            code :400,
+            message : 'Sai mật khẩu cũ',
+        }
 }
 }
 module.exports = UserService;

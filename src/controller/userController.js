@@ -19,7 +19,8 @@ class UserController {
         })
     } else return res.status(200).json({
         code : 200,
-        token : result.token,
+        accessToken : result.accessToken,
+        refreshToken : result.refreshToken,
     })
 }
     signUp = async (req, res) => {
