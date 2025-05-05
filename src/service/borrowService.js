@@ -105,7 +105,7 @@ class BorrowService {
                     message : 'Sách này chưa được yêu cầu trả',
                 }
             }
-            const user = await this.User.findOne({ _id : userId});
+            const user = await this.User.findOne({ _id : userId });
             if(user.role !== 'Admin') {
                 return {
                     code : 400,

@@ -32,7 +32,7 @@ class UserService {
             return {
             code:400,
             message : "Đã có tài khoản.",
-        }
+        } 
     }
         const hashedPassword = await bcrypt.hash(password, 10);
         const newUser = new this.User({
@@ -47,16 +47,17 @@ class UserService {
             code:200,
             message : 'Tạo tài khoản thành công'
         }}
-    async changepassService({ id, password, newPassword }) {
+    async changepassService({ id, oldPassword, newPassword }) {
         const user = await this.User.findOne({ _id : id });
         if(!user) {
             return {
             code:404,
             message : "Tài khoản không tồn tại",
         }}
-        const isMatchPassword = await bcrypt(password, user.password);
+        const isMatchPassword = await bcrypt.compare(oldPassword, user.password);
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
         if(isMatchPassword) {
-            await user.updateOne({ password: newPassword });
+            await user.updateOne({ password: hashedPassword });
             return {
             code:200,
             message: 'Cập nhật thông tin thành công',

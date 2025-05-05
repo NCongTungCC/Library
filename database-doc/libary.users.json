@@ -1,38 +1,19 @@
 [{
   "_id": {
-    "$oid": "6810392cad05de07ed33ea97"
+    "$oid": "6818410fe41c3fe120c2ea34"
   },
   "username": "tung",
-  "password": "tung",
+  "password": "$2b$10$eG9KzFeAHUEyy.3nGStz0uvHiZY08sbEAlygiZNAkg3eJh6AxcqrS",
   "birthday": {
-    "$date": "2002-03-05T17:00:00.000Z"
+    "$date": "2002-03-04T17:00:00.000Z"
   },
   "gender": "Nam",
   "role": "Admin",
   "createdAt": {
-    "$date": "2025-04-29T02:27:56.361Z"
+    "$date": "2025-05-05T04:39:43.038Z"
   },
   "updatedAt": {
-    "$date": "2025-04-29T02:27:56.361Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "68103949ad05de07ed33ea9a"
-  },
-  "username": "tungtungtungsahur",
-  "password": "tung",
-  "birthday": {
-    "$date": "2002-03-05T17:00:00.000Z"
-  },
-  "gender": "Nam",
-  "role": "Người dùng",
-  "createdAt": {
-    "$date": "2025-04-29T02:28:25.311Z"
-  },
-  "updatedAt": {
-    "$date": "2025-04-29T02:28:25.311Z"
+    "$date": "2025-05-05T09:10:49.516Z"
   },
   "__v": 0
 }]

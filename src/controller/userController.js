@@ -38,8 +38,8 @@ class UserController {
 }
     changePass = async (req, res) => {
     const id = req.user?.id;
-    const {password, newPassword} = req.body;
-    const result = await UserServiceInstance.changepassService({ id, password, newPassword });
+    const {oldPassword, newPassword} = req.body;
+    const result = await UserServiceInstance.changepassService({ id, oldPassword, newPassword });
     if(result.code !== 200) {
         return res.status(result.code).json({
             code : result.code,
