@@ -4,25 +4,27 @@ Bảng books để lưu trữ dữ liệu sách
 
 id           ObjectId
 
-tensach      String
+namebook      String
 
-tacgia       String 
+author       String 
 
-namxuatban   Int
+year         Int
 
-mota         String
+description  String
 
 poster       String
 
 totalBook    Int
 
+categoryId   ObjectId
+
 borrowBook   Int
 
 availableBook Int 
 
-nguoitao     String
+user     String
 
-nguoicapnhat   String
+userupdate   String
 
 Bảng users để lưu trữ tài khoản
 
@@ -35,6 +37,8 @@ password     String
 gender       String
 
 birthday     Date
+
+role         String
 
 Bảng borrowings để lưu trữ dữ liệu mượn trả sách
 
@@ -54,9 +58,9 @@ Bảng categorys để lưu trữ các thể loại sách
 
 id           ObjectId
 
-tentheloai   String
+category   String
 
-mota         String
+description    String
 
 Bảng logs để lưu trữ lại các lịch sử hành động của người dùng
 
@@ -66,6 +70,6 @@ userId      ObjectId
 
 movieId     ObjectId
 
-hanhdong    String
+action    String
 
 time        Date

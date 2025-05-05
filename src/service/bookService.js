@@ -100,11 +100,11 @@ class BookService {
                     throw new Error(`Không tìm thấy thể loại: ${item}`);
                 }
                 return categoryDoc._id;
-                })
+            })
             );
         const user = await this.User.findOne({_id : userId});
         const username = user.username;
-            await book.updateOne({namebook, author, year, description, poster, totalBook, categoryId : categorys._id, userupdate : username});
+            await book.updateOne({namebook, author, year, description, poster, totalBook, categoryId : categoryDocs, userupdate : username});
             return{
                 code : 200,
                 message : 'Cập nhật thành công',

@@ -112,7 +112,7 @@ class BorrowService {
                     message : 'Chỉ ADMIN mới có quyền xác nhận',
                 }
             }
-            const book = await this.Book.findOne({_id : borrow.bookId});
+            const book = await this.Book.findOne({ _id : borrow.bookId});
             if (!book) {
                 return {
                     code: 404,
