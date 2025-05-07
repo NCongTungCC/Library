@@ -25,7 +25,7 @@ updateCategoryValidator = [
 
 deleteCategoryValidator = [
     param('id').isMongoId().withMessage('borrowId không hợp lệ'),
-  ];
+];
 
 const categoryValidator = {
     createCategoryValidator,
