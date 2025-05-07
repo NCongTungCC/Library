@@ -1,6 +1,6 @@
 const express = require('express');
 const authenToken = require('../middleware/authenticateToken');
-const { createCategoryValidator, updateCategoryValidator, deleteCategoryValidator } = require('../schema/categorySchema');
+const { createCategoryValidator, updateCategoryValidator, deleteCategoryValidator } = require('../validator/categoryValidator');
 const validateResult = require('../middleware/validateRequest');
 const CategoryController = require('../controller/categoryController');
 

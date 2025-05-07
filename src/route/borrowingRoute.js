@@ -1,6 +1,6 @@
 const express = require('express');
 const authenToken = require('../middleware/authenticateToken');
-const { borrowBookValidator, returnBookValidator, confirmReturnValidator } = require('../schema/borrowSchema');
+const { borrowBookValidator, returnBookValidator, confirmReturnValidator } = require('../validator/borrowValidator');
 const validateResult = require('../middleware/validateRequest');
 const BorrowController = require('../controller/borrowingController'); 
 

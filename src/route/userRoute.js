@@ -1,7 +1,7 @@
 const express = require('express');
 const UserController = require('../controller/userController.js');
 const refreshTokenHandler = require('../middleware/refreshToken.js');
-const { loginValidator, signupValidator, changePassValidator } = require('../schema/userSchema');
+const { loginValidator, signupValidator, changePassValidator } = require('../validator/userValidator.js');
 const validateResult = require('../middleware/validateRequest');
 const authenToken = require('../middleware/authenticateToken.js');
 

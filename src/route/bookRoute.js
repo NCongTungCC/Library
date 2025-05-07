@@ -3,7 +3,7 @@ const authenToken = require('../middleware/authenticateToken');
 const router = express.Router();
 const upload = require('../middleware/multer');
 const multer = require('multer');
-const { createBookValidator, updateBookValidator, deleteBookValidator } = require('../schema/bookSchema');
+const { createBookValidator, updateBookValidator, deleteBookValidator } = require('../validator/bookValidator');
 const validateResult = require('../middleware/validateRequest');
 // upload.single('poster')
 
