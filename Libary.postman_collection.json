@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\" : \"tung\",\r\n    \"password\" : \"tung\"\r\n}",
+					"raw": "{\r\n    \"username\" : \"tung\",\r\n    \"password\" : \"tung2\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -55,7 +55,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"password\" : \"tung\",\r\n    \"newPassword\" : \"tung1\"\r\n}",
+					"raw": "{\r\n    \"oldPassword\" : \"tung\",\r\n    \"newPassword\" : \"tung1\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

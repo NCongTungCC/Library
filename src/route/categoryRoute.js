@@ -1,17 +1,18 @@
 const express = require('express');
 const authenToken = require('../middleware/authenticateToken');
-
+const { createCategoryValidator, updateCategoryValidator, deleteCategoryValidator } = require('../schema/categorySchema');
+const validateResult = require('../middleware/validateRequest');
 const CategoryController = require('../controller/categoryController');
 
 const router = express.Router();
 
-router.get("/category", authenToken, CategoryController.getCategory);
+router.post("/category", authenToken, createCategoryValidator, validateResult, CategoryController.getCategory);
 
-router.post("/category", authenToken, CategoryController.createCategory);
+router.get("/category", authenToken, CategoryController.createCategory);
 
-router.delete("/category/:id", authenToken, CategoryController.deleteCategory);
+router.delete("/category/:id", deleteCategoryValidator, validateResult, authenToken, CategoryController.deleteCategory);
 
-router.put("/category/:id", authenToken, CategoryController.updateCategory);
+router.put("/category/:id", authenToken, updateCategoryValidator, validateResult, CategoryController.updateCategory);
 
 module.exports = router;
 

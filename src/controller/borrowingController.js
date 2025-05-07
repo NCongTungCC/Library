@@ -62,7 +62,7 @@ class BrrowController {
             code : 200,
             message : result.message,
             data : result.data,
-        })
+        });
     }
 }
 

@@ -63,7 +63,7 @@ class UserService {
             message: 'Cập nhật thông tin thành công',
         }} 
         return {
-            code :400,
+            code : 400,
             message : 'Sai mật khẩu cũ',
         }
 }

@@ -38,7 +38,7 @@ class CategoryController {
                 message : result.message,
             })
     }
-    deleteCategory = async (req, res) => {
+    deleteCategory = async (req, res) => {  
         const {id} = req.params;
         const result = await this.CategoryService.deleteCategory({id});
         if(result.code !== 200) {
