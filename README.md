@@ -4,7 +4,7 @@ Hệ thống sử dụng NodeJS, ExpressJS, CSDL MongoDB và viết bằng ngôn
 
 ## 1. Clone source code
 
-chạy lệnh git clone https://github.com/longtungg/hocgit.git và chạy lệnh git checkout libary để chuyển qua nhánh libary
+chạy lệnh git clone https://github.com/longtungg/hocgit.git
 
 ## 2. Tạo CSDL libary ở MongoDB  và Import dữ liệu các bảng database tại database-doc
 
